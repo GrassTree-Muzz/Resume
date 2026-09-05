@@ -452,7 +452,10 @@
     </div></div>
   </section>
 
-  <footer>Murray Lewin &middot; Cottesloe, Western Australia</footer>
+  <footer>
+    <div>Murray Lewin &middot; Cottesloe, Western Australia</div>
+    <div class="updated" id="lastUpdated" aria-live="polite">Last updated: checking&hellip;</div>
+  </footer>
 </main>
 
 <script>
@@ -515,6 +518,15 @@
     apply();
     try { localStorage.setItem('ml-theme', dark ? 'dark' : 'light'); } catch (err) { /* ignore */ }
   });
+
+  /* ---- last updated ---- */
+  var updated = document.getElementById('lastUpdated');
+  var modified = new Date(document.lastModified);
+  if (!isNaN(modified.getTime())) {
+    updated.textContent = 'Last updated: ' + modified.toLocaleString(undefined, {
+      dateStyle: 'medium', timeStyle: 'short'
+    });
+  }
 })();
 </script>
 </body>
