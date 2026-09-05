@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#142722">
+  <meta name="description" content="Murray Lewin is a consultant engineer specialising in maintenance strategy, reliability engineering, asset data and practical software delivery.">
+  <title>Murray Lewin | Consultant Engineer</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Murray Lewin, home">
+      <span class="brand-mark" aria-hidden="true">ML</span>
+      <span>Murray Lewin</span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <a href="#profile">Profile</a>
+      <a href="#experience">Experience</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#education">Education</a>
+    </nav>
+    <button class="icon-button" id="themeToggle" type="button" aria-label="Use dark colour theme" title="Change colour theme">
+      <span aria-hidden="true">◐</span>
+    </button>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-image" src="assets/murray-lewin.jpg" alt="Portrait of Murray Lewin">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Consultant engineer · Perth, Western Australia</p>
+        <h1 id="hero-title">Engineering judgement.<br>Useful data.<br><em>Better decisions.</em></h1>
+        <p class="hero-summary">I work where maintenance strategy, reliability and asset data meet practical software delivery.</p>
+        <div class="hero-actions" aria-label="Contact and resume links">
+          <a class="button button-primary" href="mailto:murraylewin91@gmail.com?subject=Professional%20enquiry%20for%20Murray%20Lewin">Email Murray</a>
+          <a class="button button-secondary" href="assets/murray-lewin-resume.pdf" download>Download resume</a>
+          <a class="text-link light-link" href="https://www.linkedin.com/in/murraylewinengdata/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <a class="hero-next" href="#profile">Explore profile <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <section class="signal-band" aria-label="Career highlights">
+      <div><strong>7</strong><span>project roles</span></div>
+      <div><strong>5</strong><span>countries engaged</span></div>
+      <div><strong>2</strong><span>Pilbara sites for AHI rollout</span></div>
+      <div><strong>4/3</strong><span>FIFO experienced</span></div>
+    </section>
+
+    <section class="section profile-section" id="profile" aria-labelledby="profile-title">
+      <div class="section-heading">
+        <p class="eyebrow">01 · Profile</p>
+        <h2 id="profile-title">An engineer who can move between the asset, the data and the tool.</h2>
+      </div>
+      <div class="profile-copy">
+        <p class="lead">I am a consultant engineer in Deloitte's Strategy, Risk and Transactions practice, working within a specialist asset management team.</p>
+        <p>My work combines maintenance strategy optimisation, reliability analysis, maintenance master data and software delivery. I enjoy the point where engineering judgement meets useful data: finding what matters, making it visible and building tools that help people act on it.</p>
+        <dl class="profile-facts">
+          <div><dt>Focus</dt><dd>Maintenance strategy, reliability, defect elimination and master data</dd></div>
+          <div><dt>Industry</dt><dd>Mining and heavy industry across fixed plant and mobile equipment</dd></div>
+          <div><dt>Core stack</dt><dd>SAP, Databricks, Python, SQL, Power BI, React, TypeScript, FastAPI and Azure</dd></div>
+          <div><dt>Location</dt><dd>Cottesloe, Western Australia · FIFO experienced</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section experience-section" id="experience" aria-labelledby="experience-title">
+      <div class="section-heading">
+        <p class="eyebrow">02 · Evidence explorer</p>
+        <h2 id="experience-title">Trace capability to real work.</h2>
+        <p>Choose a lens or search the detail. Every result stays grounded in delivered project experience.</p>
+      </div>
+
+      <div class="explorer-controls" aria-label="Experience filters">
+        <div class="search-field">
+          <label for="experienceSearch">Search experience</label>
+          <input id="experienceSearch" type="search" placeholder="Try SAP, reliability or Power BI" autocomplete="off">
+        </div>
+        <div>
+          <span class="control-label" id="lensLabel">Capability lens</span>
+          <div class="filter-list" role="group" aria-labelledby="lensLabel">
+            <button type="button" class="filter-button" data-filter="all" aria-pressed="true">All work</button>
+            <button type="button" class="filter-button" data-filter="strategy" aria-pressed="false">Strategy</button>
+            <button type="button" class="filter-button" data-filter="reliability" aria-pressed="false">Reliability</button>
+            <button type="button" class="filter-button" data-filter="masterdata" aria-pressed="false">Asset data</button>
+            <button type="button" class="filter-button" data-filter="software" aria-pressed="false">Software &amp; AI</button>
+            <button type="button" class="filter-button" data-filter="stakeholders" aria-pressed="false">Stakeholders</button>
+          </div>
+        </div>
+        <p class="result-count" id="resultCount" aria-live="polite">Showing all 7 project roles.</p>
+      </div>
+
+      <div class="timeline" id="experienceList">
+        <article class="role-card featured" data-tags="strategy reliability masterdata software sap stakeholders" data-search="maintenance system optimisation mso consultant engineer deloitte iron ore pilbara ai databricks sap postgresql azure react typescript python fastapi weibull mtbf mttf asset health index floc bom">
+          <div class="timeline-marker" aria-hidden="true"><span></span></div>
+          <div class="role-date">Jan 2026 — Present</div>
+          <div class="role-content">
+            <p class="role-kicker">Deloitte · Global iron ore producer</p>
+            <h3>Maintenance System Optimisation</h3>
+            <p>Helped build a full-stack, cloud-native AI application that modernises maintenance strategy processes across heavy mobile equipment and fixed plant.</p>
+            <ul class="evidence-list">
+              <li><strong>Reliability:</strong> Weibull analysis, MTBF/MTTF, Asset Health Index scoring and replacement modelling.</li>
+              <li><strong>Master data:</strong> Human-in-the-loop review for material classifications, FLOC BOM validation and work order classification.</li>
+              <li><strong>Software:</strong> React and TypeScript features, Python and FastAPI endpoints, Databricks data products and Azure deployment.</li>
+            </ul>
+            <div class="tag-list" aria-label="Capabilities"><span>Reliability</span><span>Asset data</span><span>Software &amp; AI</span><span>SAP</span></div>
+          </div>
+        </article>
+
+        <article class="role-card" data-tags="strategy stakeholders" data-search="group asset management framework consultant engineer deloitte gold mining system definition key practice areas workshops australia chile south africa ghana canada">
+          <div class="timeline-marker" aria-hidden="true"><span></span></div>
+          <div class="role-date">Sep 2025 — Jan 2026</div>
+          <div class="role-content">
+            <p class="role-kicker">Deloitte · Global gold mining operator</p>
+            <h3>Group Asset Management Framework</h3>
+            <p>Rolled out the group Asset Management Framework and System Definition, defining Key Practice Areas, system requirements and documentation layout.</p>
+            <ul class="evidence-list"><li>Facilitated workshops with central and site asset management teams across Australia, Chile, South Africa, Ghana and Canada.</li></ul>
+            <div class="tag-list" aria-label="Capabilities"><span>Strategy</span><span>Stakeholders</span></div>
+          </div>
+        </article>
+
+        <article class="role-card" data-tags="reliability strategy stakeholders" data-search="asset health index rollout fixed plant consultant engineer deloitte iron ore pilbara power bi wet plant low grade fixed plant fifo">
+          <div class="timeline-marker" aria-hidden="true"><span></span></div>
+          <div class="role-date">Mar 2025 — Sep 2025</div>
+          <div class="role-content">
+            <p class="role-kicker">Deloitte · Global iron ore producer</p>
+            <h3>Asset Health Index Rollout</h3>
+            <p>Built and rolled out an Asset Health Index across two Pilbara fixed-plant sites on a 4/3 FIFO roster.</p>
+            <ul class="evidence-list"><li>Developed Power BI dashboards and worked with reliability engineers and site stakeholders to validate scoring methods.</li></ul>
+            <div class="tag-list" aria-label="Capabilities"><span>Reliability</span><span>Power BI</span><span>Stakeholders</span></div>
+          </div>
+        </article>
+
+        <article class="role-card" data-tags="data stakeholders" data-search="labour benchmarking review data reporting analyst deloitte iron ore pilbara national database major assets comparison client engagement">
+          <div class="timeline-marker" aria-hidden="true"><span></span></div>
+          <div class="role-date">Jan 2025 — Mar 2025</div>
+          <div class="role-content">
+            <p class="role-kicker">Deloitte · Iron ore producer</p>
+            <h3>Labour Benchmarking Review</h3>
+            <p>Built a national labour-quantity database and normalised site data into major asset groups for like-for-like comparison.</p>
+            <div class="tag-list" aria-label="Capabilities"><span>Data</span><span>Stakeholders</span></div>
+          </div>
+        </article>
+
+        <article class="role-card" data-tags="strategy data" data-search="asset management plans substations engineering analyst deloitte iron ore pilbara reports datasets regulatory low voltage replacement recommendations costing">
+          <div class="timeline-marker" aria-hidden="true"><span></span></div>
+          <div class="role-date">Sep 2024 — Dec 2024</div>
+          <div class="role-content">
+            <p class="role-kicker">Deloitte · Global iron ore producer</p>
+            <h3>Asset Management Plans · Substations</h3>
+            <p>Built reports from large datasets, validated regulatory precautions at low-voltage substations and developed replacement recommendations from historical costing and changeout analysis.</p>
+            <div class="tag-list" aria-label="Capabilities"><span>Strategy</span><span>Data</span></div>
+          </div>
+        </article>
+
+        <article class="role-card" data-tags="strategy reliability sap" data-search="asset management uplift programme asset tactics review graduate team member deloitte iron ore pilbara defect elimination bad actor sap pm01 pm02 pm03 changeout maintenance strategy prt">
+          <div class="timeline-marker" aria-hidden="true"><span></span></div>
+          <div class="role-date">Jun 2024 — Sep 2024</div>
+          <div class="role-content">
+            <p class="role-kicker">Deloitte · Global iron ore producer</p>
+            <h3>Asset Management Uplift Programme</h3>
+            <p>Reviewed bad actors, SAP changeout notifications and maintenance strategy documentation to expose downtime drivers and incomplete asset tactics.</p>
+            <div class="tag-list" aria-label="Capabilities"><span>Strategy</span><span>Reliability</span><span>SAP</span></div>
+          </div>
+        </article>
+
+        <article class="role-card" data-tags="sap masterdata" data-search="closed work order parts reallocation storefront macmahon sap stock service kits maintenance crews stocktake">
+          <div class="timeline-marker" aria-hidden="true"><span></span></div>
+          <div class="role-date">Nov 2022 — Mar 2024</div>
+          <div class="role-content">
+            <p class="role-kicker">Macmahon · Part time / ad hoc</p>
+            <h3>Closed Work Order &amp; Parts Reallocation</h3>
+            <p>Used SAP to manage parts, work orders, service kits and stocktakes for maintenance crews.</p>
+            <div class="tag-list" aria-label="Capabilities"><span>SAP</span><span>Asset data</span></div>
+          </div>
+        </article>
+      </div>
+      <p class="empty-state" id="emptyState" hidden>No roles match that combination. Clear the search or choose another capability.</p>
+    </section>
+
+    <section class="section capability-section" id="capabilities" aria-labelledby="capabilities-title">
+      <div class="section-heading">
+        <p class="eyebrow">03 · Capability map</p>
+        <h2 id="capabilities-title">A connected technical toolkit.</h2>
+      </div>
+      <div class="capability-grid">
+        <article><span class="capability-number">01</span><h3>Asset strategy</h3><p>Maintenance strategy optimisation, defect elimination, work management and asset management frameworks.</p></article>
+        <article><span class="capability-number">02</span><h3>Reliability</h3><p>Weibull analysis, MTBF and MTTF, Asset Health Index scoring, age analysis and replacement modelling.</p></article>
+        <article><span class="capability-number">03</span><h3>Asset data</h3><p>SAP, FLOC hierarchies, BOM validation, material classification, PostgreSQL, SQL and Power BI.</p></article>
+        <article><span class="capability-number">04</span><h3>Digital delivery</h3><p>Python, FastAPI, React, TypeScript, Plotly.js, Databricks, Azure, AWS, Docker and Git.</p></article>
+      </div>
+      <div class="working-style"><p>How I work</p><ul><li>Client engagement</li><li>Clear communication</li><li>Cross-functional collaboration</li><li>Fast learning</li><li>Practical delivery</li></ul></div>
+    </section>
+
+    <section class="section education-section" id="education" aria-labelledby="education-title">
+      <div class="section-heading">
+        <p class="eyebrow">04 · Foundations</p>
+        <h2 id="education-title">Engineering depth, data fluency.</h2>
+      </div>
+      <div class="education-layout">
+        <article class="degree-block">
+          <p class="role-kicker">University of Western Australia</p>
+          <h3>Bachelor of Science</h3>
+          <p>Mechanical Engineering · Data Science</p>
+        </article>
+        <article class="project-block">
+          <p class="role-kicker">Selected university project · 2023</p>
+          <h3>Document question-answering chatbot</h3>
+          <p>Built a web chatbot across HTML, CSS, JavaScript and Python, connecting cloud-hosted AI services to a university document set. The project reached roughly 95% answer accuracy and received a 90% overall mark.</p>
+        </article>
+      </div>
+      <div class="community-line"><strong>Beyond work</strong><span>Volunteer experience across Ronald McDonald House, remote education and special education programs · Duke of Edinburgh Bronze Medallion</span></div>
+    </section>
+
+    <section class="contact-section" aria-labelledby="contact-title">
+      <p class="eyebrow">Start a conversation</p>
+      <h2 id="contact-title">Looking for the overlap between engineering insight and digital delivery?</h2>
+      <div class="contact-actions">
+        <a class="button button-primary" href="mailto:murraylewin91@gmail.com?subject=Professional%20enquiry%20for%20Murray%20Lewin">murraylewin91@gmail.com</a>
+        <a class="button button-quiet" href="tel:+61477477991">0477 477 991</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Murray Lewin · Cottesloe, Western Australia</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+</body>
+</html>
