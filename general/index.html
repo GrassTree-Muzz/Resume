@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#eef2f1">
+<title>Murray Lewin — General Resume</title>
+<style>
+  :root{--bg:#eef2f1;--surface:#fff;--ink:#1c2828;--muted:#627070;--accent:#176b67;--accent-soft:#d8e9e6;--line:#d4dfdd;--shadow:0 1px 2px rgba(28,40,40,.06),0 10px 28px rgba(28,40,40,.07)}
+  html[data-theme="dark"]{--bg:#161d1d;--surface:#222b2b;--ink:#edf3f1;--muted:#aab9b6;--accent:#79c8bd;--accent-soft:#29413f;--line:#354443;--shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px rgba(0,0,0,.35)}
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;padding-bottom:env(safe-area-inset-bottom)}
+  .wrap{max-width:820px;margin:0 auto;padding:0 18px}
+  header{padding:44px 0 24px;text-align:center}
+  .eyebrow{color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:0 0 8px}
+  .name{font-size:clamp(32px,8vw,48px);font-weight:750;letter-spacing:-.02em;margin:0}
+  .tagline{color:var(--accent);font-size:17px;font-weight:600;max-width:600px;margin:8px auto 10px}
+  .intro{color:var(--muted);max-width:650px;margin:0 auto 18px}
+  .contact{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+  .contact a{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;box-shadow:var(--shadow)}
+  .contact a:active{transform:scale(.97)}
+  .theme-btn{position:fixed;top:12px;right:12px;z-index:60;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-size:18px;cursor:pointer;box-shadow:var(--shadow)}
+  nav{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
+  .tabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding:8px 18px;max-width:820px;margin:0 auto}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:0 0 auto;border:0;background:transparent;color:var(--muted);font:inherit;font-size:14px;font-weight:600;padding:9px 14px;border-radius:999px;cursor:pointer;white-space:nowrap}
+  .tab[aria-selected="true"]{background:var(--accent);color:#fff}
+  .panel{display:none;padding:24px 0 84px;animation:fade .25s ease}.panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.panel{animation:none}html{scroll-behavior:auto}}
+  h2{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:28px 0 10px}h2:first-child{margin-top:0}
+  p{margin:0 0 12px}.lead{font-size:18px;line-height:1.6}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;margin:0 0 12px;box-shadow:var(--shadow);overflow:hidden}.card-pad{padding:17px 18px}
+  .job summary{list-style:none;cursor:pointer;padding:16px 46px 16px 18px;position:relative}.job summary::-webkit-details-marker{display:none}
+  .job summary::after{content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:22px;color:var(--accent);line-height:1}.job[open] summary::after{content:"\2212"}
+  .role{font-weight:700;font-size:16px;display:block}.org{color:var(--accent);font-weight:600;font-size:14px;display:block;margin-top:2px}.dates{color:var(--muted);font-size:13px;display:block;margin-top:2px}
+  .job-body{padding:0 18px 16px;border-top:1px solid var(--line);margin-top:12px;padding-top:14px}.job-body p{font-size:15px}ul{margin:0;padding-left:20px}li{margin-bottom:7px;font-size:15px}li b{color:var(--accent)}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}.chip{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:7px 13px;font:inherit;font-size:14px}
+  .kv{font-size:15px;margin-bottom:11px}.kv:last-child{margin-bottom:0}.kv b{display:block;color:var(--accent);font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+  footer{text-align:center;color:var(--muted);font-size:12px;padding:0 0 28px}.updated{margin-top:4px}
+  @media (max-width:600px){
+    body{font-size:15px}.wrap{padding-left:14px;padding-right:14px}header{padding:58px 0 18px}.name{font-size:clamp(32px,10vw,40px)}
+    .tagline{font-size:16px;line-height:1.45}.intro{font-size:14px;line-height:1.5}.contact{gap:7px}.contact a{flex:1 1 calc(50% - 7px);min-width:0;padding:8px 7px;font-size:13px;white-space:nowrap}
+    .theme-btn{top:10px;right:10px;width:44px;height:44px}.tabs{gap:2px;padding:7px 14px}.tab{font-size:13px;padding:9px 11px}.panel{padding:19px 0 64px}.lead{font-size:16px}.card-pad{padding:14px}.job summary{padding:14px 42px 14px}.job-body{padding:13px 14px 14px}li{font-size:14px;margin-bottom:8px}.chips{gap:7px}.chip{padding:8px 11px;font-size:13px}
+  }
+</style>
+</head>
+<body>
+<button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode">&#9789;</button>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">General resume · A clear view of the work</p>
+    <h1 class="name">Murray Lewin</h1>
+    <p class="tagline">Consultant Engineer turning maintenance data into decisions that hold up in the field.</p>
+    <p class="intro">This is my broad, uncustomised resume: a practical overview of the engineering, reliability, asset management and software work I bring to a team.</p>
+    <div class="contact">
+      <a href="tel:+61477477991">&#9990; 0477 477 991</a>
+      <a href="mailto:murraylewin91@gmail.com">&#9993; Email</a>
+      <a href="https://www.linkedin.com/in/murraylewinengdata/" target="_blank" rel="noopener noreferrer">in LinkedIn</a>
+    </div>
+  </div>
+</header>
+
+<nav><div class="tabs" role="tablist" aria-label="Resume sections">
+  <button class="tab" role="tab" id="tab-profile" aria-controls="panel-profile" aria-selected="true">Profile</button>
+  <button class="tab" role="tab" id="tab-experience" aria-controls="panel-experience" aria-selected="false">Experience</button>
+  <button class="tab" role="tab" id="tab-skills" aria-controls="panel-skills" aria-selected="false">Skills</button>
+  <button class="tab" role="tab" id="tab-education" aria-controls="panel-education" aria-selected="false">Education</button>
+  <button class="tab" role="tab" id="tab-more" aria-controls="panel-more" aria-selected="false">More</button>
+</div></nav>
+
+<main class="wrap">
+  <section class="panel active" id="panel-profile" role="tabpanel" aria-labelledby="tab-profile">
+    <h2>Professional summary</h2>
+    <p class="lead">I am a consultant engineer in Deloitte&rsquo;s Strategy, Risk and Transactions practice, working within a specialist asset management team.</p>
+    <p>My work combines maintenance strategy optimisation, reliability analysis, maintenance master data and software delivery. I enjoy the point where engineering judgement meets useful data: finding what matters, making it visible and building tools that help people act on it.</p>
+    <h2>At a glance</h2>
+    <div class="card"><div class="card-pad">
+      <div class="kv"><b>Focus</b>Maintenance strategy, reliability engineering, defect elimination and master data</div>
+      <div class="kv"><b>Industry</b>Mining and heavy industry across fixed plant and mobile equipment</div>
+      <div class="kv"><b>Toolset</b>SAP, Databricks, Python, SQL, Power BI, React, TypeScript, FastAPI and Azure</div>
+      <div class="kv"><b>Based</b>Cottesloe, Western Australia · FIFO experienced</div>
+    </div></div>
+    <h2>What I bring</h2>
+    <div class="chips"><span class="chip">Engineering context</span><span class="chip">Data fluency</span><span class="chip">Clear communication</span><span class="chip">Practical delivery</span><span class="chip">Curiosity</span></div>
+  </section>
+
+  <section class="panel" id="panel-experience" role="tabpanel" aria-labelledby="tab-experience">
+    <h2>Selected experience</h2>
+    <details class="card job" open><summary><span class="role">Maintenance System Optimisation · Consultant Engineer</span><span class="org">Deloitte · Global Iron Ore Producer</span><span class="dates">January 2026 – Present</span></summary><div class="job-body"><p>Helped build a full-stack, cloud-native AI application that modernises maintenance strategy processes across heavy mobile equipment and fixed plant.</p><ul><li><b>Reliability</b> Weibull analysis, MTBF/MTTF, Asset Health Index scoring and replacement modelling.</li><li><b>Master data</b> Human-in-the-loop review for material classifications, FLOC BOM validation and work order classification.</li><li><b>Software</b> React/TypeScript features and Python/FastAPI endpoints in a vertical-slice delivery team.</li><li><b>Data</b> Databricks and SAP work order data into a PostgreSQL application database on Azure.</li></ul></div></details>
+    <details class="card job"><summary><span class="role">Group Asset Management Framework · Consultant Engineer</span><span class="org">Deloitte · Global Gold Mining Operator</span><span class="dates">September 2025 – January 2026</span></summary><div class="job-body"><ul><li>Rolled out an Asset Management Framework and System Definition across a global operation.</li><li>Facilitated workshops with central and site asset management teams across five countries.</li></ul></div></details>
+    <details class="card job"><summary><span class="role">Asset Health Index Rollout · Consultant Engineer</span><span class="org">Deloitte · Global Iron Ore Producer</span><span class="dates">March 2025 – September 2025</span></summary><div class="job-body"><ul><li>Built and rolled out an Asset Health Index across two Pilbara sites.</li><li>Developed Power BI dashboards and worked with site stakeholders to validate scoring methods.</li></ul></div></details>
+    <details class="card job"><summary><span class="role">Asset Management Uplift Programme · Graduate Team Member</span><span class="org">Deloitte · Global Iron Ore Producer</span><span class="dates">June 2024 – September 2024</span></summary><div class="job-body"><ul><li>Performed bad actor reviews, SAP changeout analysis and maintenance strategy documentation reviews.</li></ul></div></details>
+    <details class="card job"><summary><span class="role">Closed Work Order and Parts Reallocation · Storefront</span><span class="org">Macmahon</span><span class="dates">November 2022 – March 2024</span></summary><div class="job-body"><ul><li>Used SAP to manage parts, work orders, service kits and stock takes for maintenance crews.</li></ul></div></details>
+  </section>
+
+  <section class="panel" id="panel-skills" role="tabpanel" aria-labelledby="tab-skills">
+    <h2>Asset management</h2><div class="chips"><span class="chip">Maintenance strategy optimisation</span><span class="chip">Defect elimination</span><span class="chip">Reliability engineering</span><span class="chip">Weibull / MTBF / MTTF</span><span class="chip">Asset Health Index</span><span class="chip">Work management</span><span class="chip">Master data</span></div>
+    <h2>Systems and data</h2><div class="chips"><span class="chip">SAP</span><span class="chip">Databricks</span><span class="chip">PostgreSQL</span><span class="chip">SQL</span><span class="chip">Power BI</span><span class="chip">Power Apps</span></div>
+    <h2>Programming and cloud</h2><div class="chips"><span class="chip">Python</span><span class="chip">TypeScript / React</span><span class="chip">FastAPI</span><span class="chip">Plotly.js</span><span class="chip">Azure</span><span class="chip">AWS</span><span class="chip">Docker</span><span class="chip">Git</span></div>
+    <h2>Working style</h2><div class="chips"><span class="chip">Client engagement</span><span class="chip">Collaboration</span><span class="chip">Communication</span><span class="chip">Fast learner</span><span class="chip">Flexible and adaptable</span></div>
+  </section>
+
+  <section class="panel" id="panel-education" role="tabpanel" aria-labelledby="tab-education">
+    <h2>Education</h2><div class="card"><div class="card-pad"><span class="role">Bachelor of Science</span><span class="org">University of Western Australia</span><span class="dates">Mechanical Engineering · Data Science</span></div></div><div class="card"><div class="card-pad"><span class="role">Hale School</span><span class="org">Western Australia</span><span class="dates">2013 – 2019</span></div></div>
+    <h2>Project</h2><details class="card job" open><summary><span class="role">Document question-answering chatbot</span><span class="org">University of Western Australia · Group project</span><span class="dates">July 2023 – November 2023</span></summary><div class="job-body"><ul><li>Built a web-based chatbot answering student questions from a UWA document set.</li><li>Combined an HTML, CSS and JavaScript front end with Python integration to cloud-hosted AI services.</li><li>Presented the project to the UWA Software Engineering board for a 90% overall project mark.</li></ul></div></details>
+  </section>
+
+  <section class="panel" id="panel-more" role="tabpanel" aria-labelledby="tab-more">
+    <h2>Community</h2><div class="card"><div class="card-pad"><p>Volunteer experience includes the Ronald McDonald House Big Brother Program, Ngalangangpum School in Warmun, the Mt Hawthorn Special Education Unit, Quintilian School and the Sienna Centre.</p><p style="margin:0">Achievement: Duke of Edinburgh Bronze Medallion.</p></div></div>
+    <h2>References</h2><div class="card"><div class="card-pad"><div class="kv"><b>Chris Shannen · Deloitte</b>Partner, Asset Management · <a href="tel:+61427028940" style="color:inherit">0427 028 940</a></div><div class="kv"><b>Adrienne Holt · Paramount Purchasing</b>Owner / Senior Manager · <a href="tel:+61402214515" style="color:inherit">0402 214 515</a></div></div></div>
+  </section>
+
+  <footer><div>Murray Lewin · Cottesloe, Western Australia</div><div class="updated" id="lastUpdated" aria-live="polite">Last updated: checking&hellip;</div></footer>
+</main>
+<script>
+(function(){'use strict';
+  var tabs=Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  function select(tab){tabs.forEach(function(t){var panel=document.getElementById(t.getAttribute('aria-controls'));var on=t===tab;t.setAttribute('aria-selected',on?'true':'false');panel.classList.toggle('active',on)});tab.scrollIntoView({block:'nearest',inline:'center'});window.scrollTo({top:0});location.hash=tab.id.replace('tab-','')}
+  tabs.forEach(function(t){t.addEventListener('click',function(){select(t)})});
+  var initial=document.getElementById('tab-'+location.hash.replace('#',''));if(initial){select(initial)}
+  var btn=document.getElementById('themeBtn');var stored=null;try{stored=localStorage.getItem('ml-general-theme')}catch(err){}
+  var dark=stored?stored==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;function apply(){document.documentElement.setAttribute('data-theme',dark?'dark':'light');btn.innerHTML=dark?'&#9788;':'&#9789;'}apply();btn.addEventListener('click',function(){dark=!dark;apply();try{localStorage.setItem('ml-general-theme',dark?'dark':'light')}catch(err){}});
+  var updated=document.getElementById('lastUpdated');var modified=new Date(document.lastModified);if(!isNaN(modified.getTime())){updated.textContent='Last updated: '+modified.toLocaleString(undefined,{dateStyle:'medium',timeStyle:'short'})}
+})();
+</script>
+</body>
+</html>
