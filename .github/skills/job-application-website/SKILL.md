@@ -1,6 +1,6 @@
 ---
 name: job-application-website
-description: "Use when creating or updating a tailored personal resume website for a new job application from a job posting, role brief, recruiter message, or company information. Extracts role requirements, maps them to verified experience, creates a focused static site, and validates the result."
+description: "Use when creating or updating a tailored personal resume website for a new job application from a job posting, role brief, recruiter message, or company information, including recurring formatting updates. Extracts role requirements, maps them to verified experience, creates a focused static site, and validates the result."
 ---
 
 # Job Application Website
@@ -28,6 +28,7 @@ This workspace is a static HTML resume site. Preserve its existing architecture 
 - Root-level images and PDFs are reusable assets.
 - The existing profile image used by the PDF is the canonical website profile image. Reuse that exact asset and its crop unless the user supplies a replacement; do not create a second near-identical copy.
 - New role-specific pages belong in a descriptive folder, for example `applications/<company>-<role>/index.html`, unless the user requests that the root page be replaced.
+- When the user requests a recurring formatting or visual update, record that preference in this skill and apply it to the current page unless the user says the change is one-off.
 
 Prefer plain HTML, CSS, and JavaScript. Reuse existing visual patterns, responsive behavior, accessibility conventions, and shared data where practical. Do not introduce a build system for a small static change.
 
@@ -199,3 +200,4 @@ Before finishing, confirm:
 - [ ] Mobile layout, keyboard access, focus states, and reduced motion are considered.
 - [ ] No placeholder, debug text, secret, or unsupported claim remains.
 - [ ] A focused executable or browser validation was run, or the limitation is reported.
+- [ ] Any recurring formatting preference from the user was added to this skill and applied to the page.

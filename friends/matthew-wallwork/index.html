@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3efe7">
+  <meta name="description" content="Matthew Wallwork is an electrical and electronic engineering student with practical experience across remote operations, business ownership, maintenance and electronics.">
+  <title>Matthew Wallwork | Electrical &amp; Electronic Engineering</title>
+  <style>
+    :root {
+      --paper: #f3efe7;
+      --paper-deep: #e8e0d3;
+      --ink: #1d2523;
+      --muted: #5e6963;
+      --line: #c9c2b6;
+      --signal: #ef6a3a;
+      --signal-deep: #b94c25;
+      --teal: #1d6862;
+      --white: #fffdf8;
+      --shadow: 0 18px 42px rgba(37, 44, 40, .10);
+      --display: Georgia, "Times New Roman", serif;
+      --mono: "Cascadia Mono", Consolas, monospace;
+      --sans: "Trebuchet MS", "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 16px/1.6 var(--sans);
+    }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--signal); outline-offset: 4px; }
+    .site-shell { width: min(1240px, calc(100% - 32px)); margin: 0 auto; padding: 0 26px; }
+
+    .site-header {
+      display: flex; align-items: center; justify-content: space-between;
+      min-height: 76px; border-bottom: 1px solid var(--line);
+    }
+    .monogram {
+      display: inline-flex; align-items: center; gap: 11px; text-decoration: none;
+      font: 700 15px var(--mono); letter-spacing: .04em;
+    }
+    .monogram-mark {
+      display: grid; place-items: center; width: 34px; height: 34px;
+      border: 1px solid var(--ink); color: var(--paper); background: var(--ink);
+      font-size: 12px; transform: rotate(-6deg);
+    }
+    .nav-toggle { display: none; border: 0; background: transparent; color: var(--ink); font: 700 22px var(--mono); cursor: pointer; }
+    .site-nav { display: flex; align-items: center; gap: 28px; }
+    .site-nav a { text-decoration: none; color: var(--muted); font-size: 14px; }
+    .site-nav a:hover { color: var(--signal-deep); }
+    .nav-contact { color: var(--ink) !important; border-bottom: 1px solid var(--signal); padding-bottom: 3px; }
+
+    .hero {
+      position: relative; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(300px, .8fr);
+      gap: 8vw; padding: 104px 0 116px; overflow: hidden;
+    }
+    .hero::after {
+      content: ""; position: absolute; z-index: -1; right: -45px; top: 54px; width: 360px; height: 360px;
+      border: 1px solid var(--line); border-radius: 50%;
+      background: repeating-conic-gradient(from 0deg, transparent 0 14deg, rgba(29,104,98,.09) 14deg 15deg);
+      opacity: .75;
+    }
+    .eyebrow { margin: 0 0 19px; color: var(--signal-deep); font: 700 12px/1.3 var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 780px; margin-bottom: 25px; font: 400 clamp(3.6rem, 8vw, 7.2rem)/.92 var(--display); letter-spacing: -.055em; }
+    h1 em { color: var(--teal); font-style: italic; }
+    .hero-intro { max-width: 620px; margin-bottom: 32px; color: var(--muted); font-size: 19px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .button {
+      display: inline-flex; align-items: center; min-height: 45px; padding: 10px 18px;
+      border: 1px solid var(--ink); text-decoration: none; font: 700 13px var(--mono);
+    }
+    .button-primary { color: var(--white); background: var(--ink); }
+    .button-secondary { border-color: var(--line); }
+    .button:hover { transform: translateY(-2px); }
+    .hero-note { align-self: end; max-width: 300px; padding: 22px 0 0 22px; border-left: 2px solid var(--signal); }
+    .hero-note strong { display: block; margin-bottom: 8px; font: 400 29px/1 var(--display); }
+    .hero-note p { margin-bottom: 0; color: var(--muted); font-size: 14px; }
+
+    .signal-strip {
+      display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink);
+    }
+    .signal-strip div { padding: 20px 16px; border-right: 1px solid var(--line); }
+    .signal-strip div:last-child { border-right: 0; }
+    .signal-strip strong { display: block; color: var(--teal); font: 400 28px/1 var(--display); }
+    .signal-strip span { display: block; margin-top: 6px; color: var(--muted); font: 11px var(--mono); letter-spacing: .04em; text-transform: uppercase; }
+
+    .section { display: grid; grid-template-columns: minmax(220px, .34fr) minmax(0, .66fr); gap: 8vw; padding: 108px 0; border-bottom: 1px solid var(--line); }
+    .section-label { color: var(--signal-deep); font: 700 12px var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+    .section-label span { color: var(--muted); }
+    h2 { margin-bottom: 24px; font: 400 clamp(2.2rem, 4vw, 4rem)/1.02 var(--display); letter-spacing: -.045em; }
+    .section-copy { max-width: 640px; color: var(--muted); font-size: 17px; }
+    .section-copy strong { color: var(--ink); }
+    .fact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; margin-top: 38px; background: var(--line); border: 1px solid var(--line); }
+    .fact { padding: 18px; background: var(--paper); }
+    .fact b { display: block; margin-bottom: 5px; color: var(--teal); font: 700 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+    .fact span { color: var(--muted); font-size: 14px; }
+
+    .experience-list { display: grid; gap: 0; }
+    .experience-item { display: grid; grid-template-columns: 135px 1fr; gap: 24px; padding: 0 0 32px; margin-bottom: 32px; border-bottom: 1px dashed var(--line); }
+    .experience-item:last-child { margin-bottom: 0; border-bottom: 0; }
+    .experience-date { color: var(--signal-deep); font: 11px/1.4 var(--mono); letter-spacing: .03em; text-transform: uppercase; }
+    h3 { margin-bottom: 4px; font: 400 25px/1.15 var(--display); }
+    .experience-company { margin-bottom: 13px; color: var(--teal); font: 700 12px var(--mono); }
+    .experience-item p { margin-bottom: 12px; color: var(--muted); font-size: 15px; }
+    .evidence { margin: 0; padding-left: 19px; color: var(--muted); font-size: 14px; }
+    .evidence li { margin-bottom: 5px; }
+    .evidence strong { color: var(--ink); }
+
+    .capability-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .capability { padding: 22px; background: var(--white); border: 1px solid var(--line); box-shadow: 8px 8px 0 var(--paper-deep); }
+    .capability:nth-child(2) { transform: translateY(22px); }
+    .capability:nth-child(3) { transform: translateY(-4px); }
+    .capability:nth-child(4) { transform: translateY(18px); }
+    .capability-number { color: var(--signal); font: 700 12px var(--mono); }
+    .capability h3 { margin: 23px 0 8px; font-size: 22px; }
+    .capability p { margin-bottom: 0; color: var(--muted); font-size: 14px; }
+
+    .education-row { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .education-block { padding-top: 17px; border-top: 2px solid var(--teal); }
+    .education-block h3 { font-size: 22px; }
+    .education-block p { margin-bottom: 0; color: var(--muted); font-size: 14px; }
+    .qualifications { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+    .qualification { padding: 8px 11px; border: 1px solid var(--line); color: var(--muted); font: 11px var(--mono); }
+
+    .contact-section { display: grid; grid-template-columns: .8fr 1.2fr; gap: 8vw; padding: 96px 0 120px; }
+    .contact-section h2 { margin-bottom: 13px; }
+    .contact-copy { color: var(--muted); }
+    .contact-links { display: grid; align-content: center; gap: 14px; }
+    .contact-link { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 16px 0; border-bottom: 1px solid var(--line); text-decoration: none; }
+    .contact-link span:first-child { color: var(--muted); font: 11px var(--mono); text-transform: uppercase; letter-spacing: .08em; }
+    .contact-link span:last-child { color: var(--teal); font: 700 15px var(--mono); text-align: right; }
+    footer { display: flex; justify-content: space-between; gap: 20px; padding: 22px 0 34px; color: var(--muted); font: 11px var(--mono); }
+
+    @media (max-width: 760px) {
+      .site-shell { width: calc(100% - 24px); padding: 0 20px; }
+      .site-header { min-height: 65px; }
+      .nav-toggle { display: block; }
+      .site-nav { display: none; position: absolute; z-index: 3; top: 65px; left: 0; right: 0; padding: 12px 20px 18px; background: var(--paper); border-bottom: 1px solid var(--line); }
+      .site-nav.is-open { display: grid; gap: 13px; }
+      .hero { display: block; padding: 78px 0 82px; }
+      .hero::after { right: -125px; top: 54px; width: 270px; height: 270px; opacity: .55; }
+      h1 { max-width: 500px; font-size: clamp(3.5rem, 16vw, 5.8rem); }
+      .hero-intro { max-width: 520px; font-size: 17px; }
+      .hero-note { margin-top: 60px; }
+      .signal-strip { grid-template-columns: repeat(2, 1fr); }
+      .signal-strip div:nth-child(2) { border-right: 0; }
+      .signal-strip div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .section, .contact-section { display: block; padding: 72px 0; }
+      .section-label { display: block; margin-bottom: 20px; }
+      h2 { font-size: 2.65rem; }
+      .experience-item { grid-template-columns: 1fr; gap: 8px; }
+      .experience-date { order: -1; }
+      .capability-layout, .education-row { grid-template-columns: 1fr; }
+      .capability:nth-child(n) { transform: none; }
+      .contact-links { margin-top: 35px; }
+      footer { display: block; }
+      footer span { display: block; margin-top: 8px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .button:hover { transform: none; }
+    }
+    @media print {
+      .site-header { position: static; }
+      .site-nav, .nav-toggle, .hero-actions { display: none !important; }
+      .hero { padding: 50px 0; }
+      .section, .contact-section { padding: 38px 0; }
+      .capability { box-shadow: none; }
+      a { text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header site-shell">
+    <a class="monogram" href="#top" aria-label="Matthew Wallwork home">
+      <span class="monogram-mark" aria-hidden="true">MW</span>
+      <span>Matthew Wallwork</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">+</button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      <a href="#profile">Profile</a>
+      <a href="#experience">Experience</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#education">Education</a>
+      <a class="nav-contact" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero site-shell" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">Electrical &amp; electronic engineering</p>
+        <h1 id="page-title">Curious by nature.<br><em>Practical</em> by habit.</h1>
+        <p class="hero-intro">Matthew Wallwork is an engineering student who learns by taking things apart, building them back better, and stepping into unfamiliar work with intent.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="mailto:mattwallwork02@gmail.com">Start a conversation</a>
+          <a class="button button-secondary" href="#experience">View experience</a>
+        </div>
+      </div>
+      <aside class="hero-note" aria-label="Current focus">
+        <strong>Next chapter</strong>
+        <p>Beginning a Master of Professional Engineering specialising in Electrical and Electronic Engineering, scheduled for completion at the end of 2027.</p>
+      </aside>
+    </section>
+
+    <div class="signal-strip site-shell" aria-label="Highlights">
+      <div><strong>97.95</strong><span>ATAR</span></div>
+      <div><strong>2019</strong><span>John XXIII College graduate</span></div>
+      <div><strong>12+</strong><span>Years exploring circuitry</span></div>
+      <div><strong>10</strong><span>Years at North Cottesloe SLSC</span></div>
+    </div>
+
+    <section class="section site-shell" id="profile" aria-labelledby="profile-title">
+      <div class="section-label">01 <span>/ Profile</span></div>
+      <div>
+        <h2 id="profile-title">A technical mind with a strong work ethic.</h2>
+        <p class="section-copy">Matthew combines an academic foundation in <strong>engineering science and finance</strong> with unusually broad hands-on experience. He has run a small labour-hire business, worked remote station and camp operations, maintained machinery and solar systems, led mine-site stocktake teams, and taught himself microcontroller circuits since the age of 12.</p>
+        <p class="section-copy">That range has built a practical approach to problems: understand the system, respect the conditions, learn what is missing, then do the work to a high standard.</p>
+        <div class="fact-grid" aria-label="Profile facts">
+          <div class="fact"><b>Study</b><span>Engineering Science (electrical) and Finance at UWA</span></div>
+          <div class="fact"><b>Strength</b><span>Self-directed technical learning and practical application</span></div>
+          <div class="fact"><b>Environment</b><span>Remote, FIFO, residential, retail and small-business settings</span></div>
+          <div class="fact"><b>Working style</b><span>Safety-conscious, adaptable and comfortable taking ownership</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section site-shell" id="experience" aria-labelledby="experience-title">
+      <div class="section-label">02 <span>/ Experience</span></div>
+      <div class="experience-list">
+        <h2 id="experience-title">Work that travels well.</h2>
+        <article class="experience-item">
+          <div class="experience-date">Jan 2023 — current</div>
+          <div>
+            <h3>Owner · MP Labour Hire</h3>
+            <p class="experience-company">Small-business operations · Residential &amp; corporate clients</p>
+            <p>Founded and operate a sole-trader labour-hire business, building the systems behind the work as well as completing it.</p>
+            <ul class="evidence">
+              <li>Set up timesheeting, payroll, ATO filing, tax and super contribution processes.</li>
+              <li>Managed insurance registration for the business and three employees.</li>
+              <li>Planned residential landscaping work from drawings through quoting and machinery hire.</li>
+              <li>Developed management, safety and risk experience across varied jobs and clients.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="experience-item">
+          <div class="experience-date">Mar — Dec 2025</div>
+          <div>
+            <h3>Station hand · Mobile stock camp</h3>
+            <p class="experience-company">PLB Contract Mustering · Remote Western Australia</p>
+            <p>Worked in a mobile stock camp specialising in remote operations and feral cattle, with an approximately 80-hour working week and camping living arrangement.</p>
+            <ul class="evidence">
+              <li>Maintained machinery, vehicles, bores and solar systems in demanding field conditions.</li>
+              <li>Completed fencing, concreting, shed building, machinery operation, agricultural plumbing and firefighting.</li>
+              <li>Worked to high standards where reliability, judgement and self-sufficiency mattered every day.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="experience-item">
+          <div class="experience-date">Jun &amp; Dec 2024</div>
+          <div>
+            <h3>Leading stocktake team</h3>
+            <p class="experience-company">Paramount Purchasing · Telfer gold mine</p>
+            <p>Progressed from warehouse stocktaking to leading a stocktake team and completing data entry across three two-week FIFO swings.</p>
+          </div>
+        </article>
+        <article class="experience-item">
+          <div class="experience-date">Sep 2020 — Mar 2022</div>
+          <div>
+            <h3>Retail assistant · Tools Expert</h3>
+            <p class="experience-company">Bunnings Claremont</p>
+            <p>Built customer service, sales and teamwork experience while earning the Tools Expert badge.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section site-shell" id="capabilities" aria-labelledby="capabilities-title">
+      <div class="section-label">03 <span>/ Capabilities</span></div>
+      <div>
+        <h2 id="capabilities-title">The things he keeps returning to.</h2>
+        <div class="capability-layout">
+          <article class="capability"><span class="capability-number">01</span><h3>Circuits &amp; electronics</h3><p>Self-taught microcontroller circuit coding since age 12, with a long-standing interest in circuitry and electronics.</p></article>
+          <article class="capability"><span class="capability-number">02</span><h3>Mechanical confidence</h3><p>Teaches himself automotive mechanics and can complete major services on his car and boat, alongside modifications and repairs.</p></article>
+          <article class="capability"><span class="capability-number">03</span><h3>Field maintenance</h3><p>Practical experience maintaining machinery, vehicles, bores and solar systems in remote station environments.</p></article>
+          <article class="capability"><span class="capability-number">04</span><h3>Ownership &amp; systems</h3><p>Learned the accounting, legal, registration and operational procedures required to run a small business from scratch.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section site-shell" id="education" aria-labelledby="education-title">
+      <div class="section-label">04 <span>/ Education</span></div>
+      <div>
+        <h2 id="education-title">Building the formal foundation.</h2>
+        <div class="education-row">
+          <article class="education-block"><h3>Master of Professional Engineering</h3><p>Electrical and Electronic Engineering · UWA<br>Scheduled completion end of 2027</p></article>
+          <article class="education-block"><h3>Bachelor of Science</h3><p>Engineering Science (electrical), with a second major in Finance · UWA</p></article>
+          <article class="education-block"><h3>John XXIII College</h3><p>Graduated 2019 with an ATAR of 97.95</p></article>
+          <article class="education-block"><h3>Outside the classroom</h3><p>Basketball, surfing, fishing and spearfishing, camping, guitar, piano, drums, woodworking and welding.</p></article>
+        </div>
+        <div class="qualifications" aria-label="Qualifications and licences">
+          <span class="qualification">White Card</span>
+          <span class="qualification">Bronze Medallion Surf Rescue</span>
+          <span class="qualification">Recreational Skippers Ticket</span>
+          <span class="qualification">WA C Class Driver's Licence</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section site-shell" id="contact" aria-labelledby="contact-title">
+      <div>
+        <p class="eyebrow">05 · Contact</p>
+        <h2 id="contact-title">Let’s talk about the next problem worth solving.</h2>
+        <p class="contact-copy">Matthew is open to conversations about engineering opportunities, practical technical work and the challenges ahead.</p>
+      </div>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:mattwallwork02@gmail.com"><span>Email</span><span>mattwallwork02@gmail.com ↗</span></a>
+        <a class="contact-link" href="tel:+61457971472"><span>Mobile</span><span>+61 457 971 472 ↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-shell">
+    <span>Matthew Wallwork · Electrical &amp; Electronic Engineering</span>
+    <span>Updated <span id="current-year">2026</span></span>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('#site-nav');
+    navToggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+      navToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+      navToggle.textContent = isOpen ? '×' : '+';
+    });
+    nav.addEventListener('click', (event) => {
+      if (event.target.matches('a')) {
+        nav.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Open navigation');
+        navToggle.textContent = '+';
+      }
+    });
+    document.querySelector('#current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
