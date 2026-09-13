@@ -32,6 +32,20 @@ This workspace is a static HTML resume site. Preserve its existing architecture 
 
 Prefer plain HTML, CSS, and JavaScript. Reuse existing visual patterns, responsive behavior, accessibility conventions, and shared data where practical. Do not introduce a build system for a small static change.
 
+## Recurring Formatting Updates
+
+When the user asks for recurring formatting or visual refinement, treat it as part of the reusable site workflow rather than a one-off tweak.
+
+Apply these rules consistently unless the user explicitly says the change is temporary or single-use:
+
+- Image quality and expansion: prefer the canonical profile image, ensure it is crisp and readable, and allow the user to expand it without degrading the page layout.
+- Spacing and density: maintain consistent padding, margins, and breathing room around cards, headers, and content blocks so the page feels clean and uncluttered.
+- Typography consistency: keep body text, lead text, labels, and section headings visually consistent across the same page and across application variants.
+- Removal of nonessential disclaimer cards: remove placeholder or nonessential evidence/disclaimer blocks that do not help the user’s application story unless the user explicitly wants them retained.
+- Preserve the general CV: when building a tailored application page, keep the general resume as the broader source of truth and avoid modifying it unless the user clearly asks for shared updates.
+
+These updates should be applied to the current page and recorded here so the workflow remains durable across repeated customisation requests.
+
 ## Inputs to Gather
 
 Before editing, build a compact application brief:
