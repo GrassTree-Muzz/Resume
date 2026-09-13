@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#edf3f1">
+<title>Murray Lewin - Mining Performance Specialist</title>
+<style>
+  :root{--bg:#edf3f1;--surface:#fff;--ink:#1c2828;--muted:#61716f;--accent:#176b67;--soft:#d8e9e6;--line:#d4dfdd;--shadow:0 1px 2px rgba(28,40,40,.06),0 10px 28px rgba(28,40,40,.07)}
+  html[data-theme="dark"]{--bg:#161d1d;--surface:#222b2b;--ink:#edf3f1;--muted:#aab9b6;--accent:#79c8bd;--soft:#29413f;--line:#354443;--shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px rgba(0,0,0,.35)}
+  *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}a{color:inherit}.wrap{max-width:860px;margin:0 auto;padding:0 18px}
+  header{padding:46px 0 25px;text-align:center}.profile{display:block;width:82px;height:82px;object-fit:cover;object-position:center 22%;margin:0 auto 14px;border:3px solid var(--surface);border-radius:50%;box-shadow:0 0 0 1px var(--line),var(--shadow)}.eyebrow{color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:0 0 8px}.name{font-size:clamp(34px,8vw,50px);line-height:1.1;letter-spacing:-.02em;margin:0}.tagline{color:var(--accent);font-size:18px;font-weight:650;max-width:680px;margin:10px auto 8px}.intro{color:var(--muted);max-width:680px;margin:0 auto 18px}.contact{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}.contact a{display:inline-flex;align-items:center;gap:6px;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;box-shadow:var(--shadow)}
+  .theme-btn{position:fixed;top:12px;right:12px;z-index:5;width:42px;height:42px;border:1px solid var(--line);border-radius:50%;background:var(--surface);color:var(--ink);font-size:18px;cursor:pointer;box-shadow:var(--shadow)}
+  nav{position:sticky;top:0;z-index:4;background:var(--bg);border-bottom:1px solid var(--line)}.tabs{display:flex;gap:5px;overflow-x:auto;scrollbar-width:none;max-width:860px;margin:auto;padding:8px 18px}.tabs::-webkit-scrollbar{display:none}.tabs a{flex:0 0 auto;color:var(--muted);text-decoration:none;font-size:14px;font-weight:650;padding:9px 14px;border-radius:999px}.tabs a:hover,.tabs a:focus-visible{background:var(--soft);color:var(--ink)}
+  main{padding:28px 0 70px}section{scroll-margin-top:70px;margin-bottom:32px}h2{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}.lead{font-size:18px;line-height:1.6}.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin:0 0 12px;box-shadow:var(--shadow);padding:18px}.card p{margin:0 0 12px}.card p:last-child{margin-bottom:0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.fit b,.kv b{display:block;color:var(--accent);font-size:13px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:3px}.fit{padding:16px}.job summary{cursor:pointer;font-weight:700;padding-right:22px}.job summary::marker{color:var(--accent)}.org{display:block;color:var(--accent);font-weight:600;font-size:14px;margin-top:3px}.dates{display:block;color:var(--muted);font-size:13px;font-weight:400}.job-body{border-top:1px solid var(--line);margin-top:13px;padding-top:13px}.job-body p{font-size:15px}.job-body ul{margin:0;padding-left:20px}.job-body li{font-size:15px;margin-bottom:7px}.job-body li b{color:var(--accent)}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{display:inline-block;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:14px}.kv{font-size:15px;margin-bottom:13px}.kv:last-child{margin-bottom:0}footer{text-align:center;color:var(--muted);font-size:12px;padding-bottom:25px}
+  @media(max-width:600px){body{font-size:15px}.wrap{padding-left:14px;padding-right:14px}header{padding:58px 0 21px}.tagline{font-size:16px;line-height:1.45}.intro{font-size:14px}.contact{gap:7px}.contact a{flex:1 1 calc(50% - 7px);justify-content:center;padding:8px 7px;font-size:13px;white-space:nowrap}.tabs{padding:7px 14px;gap:2px}.tabs a{font-size:13px;padding:9px 11px}main{padding-top:21px}.grid{grid-template-columns:1fr}.card{padding:14px}.lead{font-size:16px}.job-body li{font-size:14px}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle dark mode">&#9789;</button>
+<header>
+  <div class="wrap">
+    <img class="profile" src="../../Mlewin%2009-2026.jpg" alt="Murray Lewin">
+    <p class="eyebrow">Application resume · RaptorTech</p>
+    <h1 class="name">Murray Lewin</h1>
+    <p class="tagline">Mining Performance Specialist | Engineering, analytics and customer outcomes</p>
+    <p class="intro">Consultant engineer with mining asset performance, reliability, dashboarding and software delivery experience, ready to work closely with mine-site teams and turn operational data into practical action.</p>
+    <div class="contact">
+      <a href="tel:+61477477991">&#9990; 0477 477 991</a>
+      <a href="mailto:murraylewin91@gmail.com">&#9993; Email</a>
+      <a href="https://www.linkedin.com/in/murraylewinengdata/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="../../general/" rel="noopener">General resume</a>
+    </div>
+  </div>
+</header>
+<nav><div class="tabs" aria-label="Resume sections"><a href="#fit">Why RaptorTech</a><a href="#experience">Experience</a><a href="#skills">Capabilities</a><a href="#education">Education</a></div></nav>
+<main class="wrap">
+  <section id="fit">
+    <h2>Why RaptorTech</h2>
+    <div class="card"><p class="lead">RaptorTech&rsquo;s work sits at the intersection of mining operations, data and technology. That is where my recent work has been strongest.</p><p>I have analysed asset and work-management information, built performance views, investigated reliability and downtime patterns, and worked directly with site and leadership stakeholders to make the outputs useful. I bring engineering context as well as the ability to build, explain and improve the tools that support decisions.</p></div>
+    <div class="grid">
+      <div class="card fit"><b>Performance analysis</b>Asset Health Index scoring, Weibull analysis, MTBF/MTTF, component age analysis, replacement projections and bad actor reviews using downtime and criticality.</div>
+      <div class="card fit"><b>Dashboards and reporting</b>Power BI dashboards, interactive Plotly.js reliability visualisations, SQL and Databricks data products, and reporting from large operational datasets.</div>
+      <div class="card fit"><b>Mining operations</b>Fixed plant and heavy mobile equipment experience across Pilbara iron ore and gold mining engagements, including a 4/3 FIFO rollout across two sites.</div>
+      <div class="card fit"><b>Stakeholder engagement</b>International workshops across five countries, validation with reliability engineers and site stakeholders, and direct client engagement.</div>
+      <div class="card fit"><b>Technology delivery</b>Python, FastAPI, React/TypeScript, Databricks, SAP and Azure application work inside a multi-disciplinary delivery team.</div>
+      <div class="card fit"><b>Continuous improvement</b>SAP changeout analysis, maintenance strategy review and master data validation used to identify gaps, anomalies and improvement opportunities.</div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Relevant experience</h2>
+    <div id="jobs"></div>
+  </section>
+
+  <section id="skills">
+    <h2>Capabilities and tools</h2>
+    <div class="card">
+      <div class="kv"><b>Mining performance</b><div class="chips"><span class="chip">Operational analysis</span><span class="chip">Reliability engineering</span><span class="chip">Defect elimination</span><span class="chip">Asset Health Index</span><span class="chip">Maintenance strategy</span><span class="chip">Work management</span><span class="chip">Master data</span></div></div>
+      <div class="kv"><b>Analytics and systems</b><div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Excel</span><span class="chip">Power BI</span><span class="chip">Databricks</span><span class="chip">SAP</span><span class="chip">PostgreSQL</span></div></div>
+      <div class="kv"><b>Technology</b><div class="chips"><span class="chip">React / TypeScript</span><span class="chip">FastAPI</span><span class="chip">Plotly.js</span><span class="chip">Azure</span><span class="chip">AWS</span><span class="chip">Docker</span><span class="chip">Git</span></div></div>
+      <div class="kv"><b>Ways of working</b><div class="chips"><span class="chip">Client engagement</span><span class="chip">Workshop facilitation</span><span class="chip">Clear communication</span><span class="chip">Collaboration</span><span class="chip">Adaptability</span></div></div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education and practical foundation</h2>
+    <div class="card"><div class="kv"><b>Bachelor of Science</b>University of Western Australia · Mechanical Engineering and Data Science</div><div class="kv"><b>Operational context</b>Mining asset management across Pilbara fixed plant and mobile equipment, plus SAP-based maintenance support at Macmahon.</div><div class="kv"><b>Evidence note</b>My experience is strongest in mining asset management and performance improvement rather than a dedicated performance specialist title. A current Australian driver&rsquo;s licence is not stated here because it has not been verified in the source material.</div></div>
+  </section>
+  <footer>Murray Lewin · Cottesloe, Western Australia · RaptorTech application page</footer>
+</main>
+<script src="../../data/experience.js"></script>
+<script>
+(function(){'use strict';
+  var jobs=document.getElementById('jobs');
+  window.resumeExperience.forEach(function(job,index){
+    var details=document.createElement('details'); details.className='card job'; details.open=index===0;
+    var summary=document.createElement('summary'); summary.innerHTML=job.role+'<span class="org">'+job.org+'</span><span class="dates">'+job.dates+'</span>';
+    var body=document.createElement('div'); body.className='job-body';
+    (job.paragraphs||[]).forEach(function(text){var p=document.createElement('p');p.innerHTML=text;body.appendChild(p)});
+    var list=document.createElement('ul'); (job.bullets||[]).forEach(function(text){var li=document.createElement('li');li.innerHTML=text;list.appendChild(li)}); body.appendChild(list);
+    details.appendChild(summary);details.appendChild(body);jobs.appendChild(details);
+  });
+  var button=document.getElementById('themeBtn'),dark=false;try{dark=localStorage.getItem('ml-raptortech-theme')==='dark'}catch(err){}function apply(){document.documentElement.setAttribute('data-theme',dark?'dark':'light');button.innerHTML=dark?'&#9788;':'&#9789;'}apply();button.addEventListener('click',function(){dark=!dark;apply();try{localStorage.setItem('ml-raptortech-theme',dark?'dark':'light')}catch(err){}});
+})();
+</script>
+</body>
+</html>
