@@ -9,7 +9,7 @@
   :root{--bg:#edf3f1;--surface:#fff;--ink:#1c2828;--muted:#61716f;--accent:#176b67;--soft:#d8e9e6;--line:#d4dfdd;--shadow:0 1px 2px rgba(28,40,40,.06),0 10px 28px rgba(28,40,40,.07)}
   html[data-theme="dark"]{--bg:#161d1d;--surface:#222b2b;--ink:#edf3f1;--muted:#aab9b6;--accent:#79c8bd;--soft:#29413f;--line:#354443;--shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px rgba(0,0,0,.35)}
   *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}a{color:inherit}.wrap{max-width:860px;margin:0 auto;padding:0 18px}
-  header{padding:46px 0 25px;text-align:center}.profile{display:block;width:82px;height:82px;object-fit:cover;object-position:center 22%;margin:0 auto 14px;border:3px solid var(--surface);border-radius:50%;box-shadow:0 0 0 1px var(--line),var(--shadow)}.eyebrow{color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:0 0 8px}.name{font-size:clamp(34px,8vw,50px);line-height:1.1;letter-spacing:-.02em;margin:0}.tagline{color:var(--accent);font-size:18px;font-weight:650;max-width:680px;margin:10px auto 8px}.intro{color:var(--muted);max-width:680px;margin:0 auto 18px}.contact{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}.contact a{display:inline-flex;align-items:center;gap:6px;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;box-shadow:var(--shadow)}
+  header{padding:46px 0 25px;text-align:center}.profile-button{display:block;padding:0;border:0;background:transparent;cursor:zoom-in;margin:0 auto 14px;border-radius:50%}.profile{display:block;width:82px;height:82px;object-fit:cover;object-position:center 22%;border:3px solid var(--surface);border-radius:50%;box-shadow:0 0 0 1px var(--line),var(--shadow)}.profile-button:focus-visible{outline:3px solid var(--accent);outline-offset:5px}.photo-dialog{width:min(720px,calc(100vw - 30px));max-width:none;padding:46px 22px 22px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}.photo-dialog::backdrop{background:rgba(15,18,18,.72)}.photo-dialog img{display:block;width:auto;max-width:100%;max-height:78vh;margin:auto;border-radius:8px}.photo-close{position:absolute;top:9px;right:12px;border:0;background:transparent;color:var(--ink);font-size:26px;line-height:1;cursor:pointer}.eyebrow{color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:0 0 8px}.name{font-size:clamp(34px,8vw,50px);line-height:1.1;letter-spacing:-.02em;margin:0}.tagline{color:var(--accent);font-size:18px;font-weight:650;max-width:680px;margin:10px auto 8px}.intro{color:var(--muted);max-width:680px;margin:0 auto 18px}.contact{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}.contact a{display:inline-flex;align-items:center;gap:6px;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;box-shadow:var(--shadow)}
   .theme-btn{position:fixed;top:12px;right:12px;z-index:5;width:42px;height:42px;border:1px solid var(--line);border-radius:50%;background:var(--surface);color:var(--ink);font-size:18px;cursor:pointer;box-shadow:var(--shadow)}
   nav{position:sticky;top:0;z-index:4;background:var(--bg);border-bottom:1px solid var(--line)}.tabs{display:flex;gap:5px;overflow-x:auto;scrollbar-width:none;max-width:860px;margin:auto;padding:8px 18px}.tabs::-webkit-scrollbar{display:none}.tabs a{flex:0 0 auto;color:var(--muted);text-decoration:none;font-size:14px;font-weight:650;padding:9px 14px;border-radius:999px}.tabs a:hover,.tabs a:focus-visible{background:var(--soft);color:var(--ink)}
   main{padding:28px 0 70px}section{scroll-margin-top:70px;margin-bottom:32px}h2{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}.lead{font-size:18px;line-height:1.6}.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin:0 0 12px;box-shadow:var(--shadow);padding:18px}.card p{margin:0 0 12px}.card p:last-child{margin-bottom:0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.fit b,.kv b{display:block;color:var(--accent);font-size:13px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:3px}.fit{padding:16px}.job summary{cursor:pointer;font-weight:700;padding-right:22px}.job summary::marker{color:var(--accent)}.org{display:block;color:var(--accent);font-weight:600;font-size:14px;margin-top:3px}.dates{display:block;color:var(--muted);font-size:13px;font-weight:400}.job-body{border-top:1px solid var(--line);margin-top:13px;padding-top:13px}.job-body p{font-size:15px}.job-body ul{margin:0;padding-left:20px}.job-body li{font-size:15px;margin-bottom:7px}.job-body li b{color:var(--accent)}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{display:inline-block;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:14px}.kv{font-size:15px;margin-bottom:13px}.kv:last-child{margin-bottom:0}footer{text-align:center;color:var(--muted);font-size:12px;padding-bottom:25px}
@@ -21,7 +21,7 @@
 <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle dark mode">&#9789;</button>
 <header>
   <div class="wrap">
-    <img class="profile" src="../../Mlewin%2009-2026.jpg" alt="Murray Lewin">
+    <button class="profile-button" id="photoOpen" type="button" aria-label="Expand Murray Lewin profile photo"><img class="profile" src="../../Mlewin%2009-2026.jpg" alt="Murray Lewin"></button>
     <p class="eyebrow">Application resume · RaptorTech</p>
     <h1 class="name">Murray Lewin</h1>
     <p class="tagline">Mining Performance Specialist | Engineering, analytics and customer outcomes</p>
@@ -30,10 +30,10 @@
       <a href="tel:+61477477991">&#9990; 0477 477 991</a>
       <a href="mailto:murraylewin91@gmail.com">&#9993; Email</a>
       <a href="https://www.linkedin.com/in/murraylewinengdata/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="../../general/" rel="noopener">General resume</a>
     </div>
   </div>
 </header>
+<dialog class="photo-dialog" id="photoDialog" aria-label="Expanded Murray Lewin profile photo"><button class="photo-close" id="photoClose" type="button" aria-label="Close expanded profile photo">&times;</button><img src="../../Mlewin%2009-2026.jpg" alt="Murray Lewin"></dialog>
 <nav><div class="tabs" aria-label="Resume sections"><a href="#fit">Why RaptorTech</a><a href="#experience">Experience</a><a href="#skills">Capabilities</a><a href="#education">Education</a></div></nav>
 <main class="wrap">
   <section id="fit">
@@ -73,6 +73,7 @@
 <script src="../../data/experience.js"></script>
 <script>
 (function(){'use strict';
+  var photoDialog=document.getElementById('photoDialog');document.getElementById('photoOpen').addEventListener('click',function(){photoDialog.showModal()});document.getElementById('photoClose').addEventListener('click',function(){photoDialog.close()});photoDialog.addEventListener('click',function(event){if(event.target===photoDialog){photoDialog.close()}});
   var jobs=document.getElementById('jobs');
   window.resumeExperience.forEach(function(job,index){
     var details=document.createElement('details'); details.className='card job'; details.open=index===0;
