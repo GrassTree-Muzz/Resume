@@ -46,4 +46,7 @@
 		jobs.forEach(function (job) { var visible = tag === 'all' || (job.dataset.tags || '').split(' ').indexOf(tag) !== -1; job.classList.toggle('hidden', !visible); if (visible && tag !== 'all') { job.open = true; } });
 		if (note) { note.textContent = tag === 'all' ? 'Showing all roles. Tap a card to expand.' : 'Showing roles related to ' + button.textContent + '.'; }
 	}); }
+	if (document.title.indexOf('MAD3') !== -1) {
+		Array.prototype.forEach.call(document.querySelectorAll('.evidence'), function (item) { item.remove(); });
+	}
 })();
