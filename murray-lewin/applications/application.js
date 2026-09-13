@@ -49,4 +49,13 @@
 	if (document.title.indexOf('MAD3') !== -1) {
 		Array.prototype.forEach.call(document.querySelectorAll('.evidence'), function (item) { item.remove(); });
 	}
+	if (document.title.indexOf('Defence') !== -1) {
+		var defencePanel = document.getElementById('panel-letter');
+		if (defencePanel) {
+			var defenceLead = defencePanel.querySelector('.lead');
+			var defenceBody = defencePanel.querySelector('.card p:not(.lead)');
+			if (defenceLead) { defenceLead.textContent = 'Western Australia is building an increasingly important Defence and maritime capability, and I want to contribute to that direction through practical mechanical engineering work.'; }
+			if (defenceBody) { defenceBody.textContent = 'I am drawn to the craft of marine and heavy-industry engineering: maintaining complex equipment, making sound decisions and seeing those decisions and tools produce safer, more reliable results. This role would let me build hands-on Defence sustainment experience while bringing my foundation in maintenance, reliability, work management and technical documentation.'; }
+		}
+	}
 })();
