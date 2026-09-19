@@ -22,7 +22,7 @@ Open [index.html](index.html) directly in a browser. No build step, package mana
 
 Copy was checked directly against the supplied `Murray Lewin Resume - Fortescue (AU).docx`, reading its Word XML paragraphs, and the existing website. Dates are abbreviated for display; responsibilities are condensed without adding outcomes. No graduation year, proficiency rating, employment duration or new result has been inferred.
 
-The downloadable PDF is the existing Fortescue version, not a newly generated general resume. Its SHA-256 and the portrait's SHA-256 match the original supplied files. The PDF was not independently text-extracted during this redesign.
+The downloadable PDF is the Fortescue version, not a newly generated general resume. It was regenerated after removing named referee contact details and replacing them with a professional references-available statement. The PDF was text-extracted to verify that the removed names and phone numbers are absent.
 
 | Category | Source | Use |
 | --- | --- | --- |
@@ -38,7 +38,7 @@ The downloadable PDF is the existing Fortescue version, not a newly generated ge
 | BSc, majors, Hale School dates, university project and 90% mark | Word resume education and university experience | Checked; published |
 | Community organisations and Duke of Edinburgh award | Word resume volunteering and achievements | Checked; published |
 | Portrait | `Mlewin 09-2026.jpg` | Unchanged local copy |
-| Referee contact details | Original documents | Not repeated on the page; the supplied PDF is unchanged |
+| Referee contact details | Original documents | Removed from the page and downloadable PDF; replaced with a professional references-available statement |
 
 Client identities remain generalised. The seven experience entries represent projects and roles, not seven separate jobs.
 
