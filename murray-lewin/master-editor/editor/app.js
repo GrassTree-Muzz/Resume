@@ -82,7 +82,68 @@ async function backupContent(prefix, content) {
   await writeTextFile(handle, content);
 }
 
+// ---------- Remembering the last opened folder (IndexedDB) ----------
+
+function idbOpen() {
+  return new Promise((resolve, reject) => {
+    const req = indexedDB.open('resume-master-editor', 1);
+    req.onupgradeneeded = () => { req.result.createObjectStore('handles'); };
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error);
+  });
+}
+
+async function idbSet(key, value) {
+  const db = await idbOpen();
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction('handles', 'readwrite');
+    tx.objectStore('handles').put(value, key);
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+  });
+}
+
+async function idbGet(key) {
+  const db = await idbOpen();
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction('handles', 'readonly');
+    const req = tx.objectStore('handles').get(key);
+    req.onsuccess = () => resolve(req.result || null);
+    req.onerror = () => reject(req.error);
+  });
+}
+
 // ---------- Project lifecycle ----------
+
+async function loadProjectFromRootHandle(rootHandle) {
+  const editorDirHandle = await rootHandle.getDirectoryHandle('master-editor', { create: true });
+  const projectFileHandle = await editorDirHandle.getFileHandle('project.json', { create: false });
+  const { text, lastModified } = await readTextFile(projectFileHandle);
+  const data = JSON.parse(text);
+  const errors = validateProject(data);
+  if (errors.length) {
+    log('Project file failed validation: ' + errors.join(' '), 'error');
+    return;
+  }
+  const templateHandle = await editorDirHandle.getDirectoryHandle('templates', { create: true })
+    .then((d) => d.getFileHandle('document.html', { create: false }));
+  const templateText = (await readTextFile(templateHandle)).text;
+
+  state.rootHandle = rootHandle;
+  state.editorDirHandle = editorDirHandle;
+  state.projectData = data;
+  state.templateText = templateText;
+  state.projectLoadedModified = lastModified;
+  state.selectedId = data.iterations[0] ? data.iterations[0].id : null;
+  clearDirty();
+
+  $('actionBar').hidden = false;
+  setStatus('Project opened: ' + data.project.title);
+  log('Opened project "' + data.project.title + '" with ' + data.iterations.length + ' iteration(s).', 'ok');
+  renderAll();
+
+  idbSet('lastRootHandle', rootHandle).catch(() => {});
+}
 
 async function openProject() {
   if (!window.showDirectoryPicker) {
@@ -91,35 +152,25 @@ async function openProject() {
     return;
   }
   try {
-    const rootHandle = await window.showDirectoryPicker();
-    const editorDirHandle = await rootHandle.getDirectoryHandle('master-editor', { create: true });
-    const projectFileHandle = await editorDirHandle.getFileHandle('project.json', { create: false });
-    const { text, lastModified } = await readTextFile(projectFileHandle);
-    const data = JSON.parse(text);
-    const errors = validateProject(data);
-    if (errors.length) {
-      log('Project file failed validation: ' + errors.join(' '), 'error');
-      return;
-    }
-    const templateHandle = await editorDirHandle.getDirectoryHandle('templates', { create: true })
-      .then((d) => d.getFileHandle('document.html', { create: false }));
-    const templateText = (await readTextFile(templateHandle)).text;
-
-    state.rootHandle = rootHandle;
-    state.editorDirHandle = editorDirHandle;
-    state.projectData = data;
-    state.templateText = templateText;
-    state.projectLoadedModified = lastModified;
-    state.selectedId = data.iterations[0] ? data.iterations[0].id : null;
-    clearDirty();
-
-    $('actionBar').hidden = false;
-    setStatus('Project opened: ' + data.project.title);
-    log('Opened project "' + data.project.title + '" with ' + data.iterations.length + ' iteration(s).', 'ok');
-    renderAll();
+    // "id" lets the browser remember this picker's last visited location across sessions.
+    const rootHandle = await window.showDirectoryPicker({ id: 'murray-lewin-project-root' });
+    await loadProjectFromRootHandle(rootHandle);
   } catch (err) {
     if (err.name === 'AbortError') { return; }
     log('Failed to open project: ' + err.message, 'error');
+  }
+}
+
+async function reopenLastProject() {
+  const handle = await idbGet('lastRootHandle').catch(() => null);
+  if (!handle) { log('No previously opened folder is remembered yet.', 'warn'); return; }
+  try {
+    let permission = await handle.queryPermission({ mode: 'readwrite' });
+    if (permission !== 'granted') { permission = await handle.requestPermission({ mode: 'readwrite' }); }
+    if (permission !== 'granted') { log('Permission to reopen the last folder was not granted.', 'error'); return; }
+    await loadProjectFromRootHandle(handle);
+  } catch (err) {
+    log('Failed to reopen the last folder: ' + err.message, 'error');
   }
 }
 
@@ -703,12 +754,20 @@ function init() {
     log('window.showDirectoryPicker is unavailable. Open this editor in desktop Edge or Chrome.', 'error');
   }
   $('openProjectBtn').addEventListener('click', openProject);
+  $('reopenProjectBtn').addEventListener('click', reopenLastProject);
   $('saveProjectBtn').addEventListener('click', () => saveProject());
   $('generateSelectedBtn').addEventListener('click', generateSelected);
   $('rebuildAllBtn').addEventListener('click', rebuildAll);
   $('viewSharedBtn').addEventListener('click', () => { state.view = 'shared'; setActiveViewButtons(); renderAll(); });
   $('viewIterationBtn').addEventListener('click', () => { state.view = 'iteration'; setActiveViewButtons(); renderAll(); });
   initModal();
+  checkForRememberedProject();
+}
+
+async function checkForRememberedProject() {
+  if (!window.indexedDB) { return; }
+  const handle = await idbGet('lastRootHandle').catch(() => null);
+  if (handle) { $('reopenProjectBtn').hidden = false; }
 }
 
 function setActiveViewButtons() {

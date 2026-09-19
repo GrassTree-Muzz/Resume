@@ -16,9 +16,14 @@ contact details, skills and education every time something changes.
    python -m http.server 8000
    ```
 3. Visit `http://localhost:8000/master-editor/master.html`.
-4. Click **Open Project Folder...** and select the `murray-lewin` folder
-   (the one containing `applications/`, `general/`, `data/` and
-   `master-editor/`).
+4. Click **Open Project Folder...** and, in the picker, select the
+   `murray-lewin` folder itself (the one containing `applications/`,
+   `general/`, `data/` and `master-editor/` - not `master-editor` and not its
+   parent `Resume/` folder).
+5. Next time, click **Reopen last project** instead - the browser remembers
+   the folder (via IndexedDB) so you don't have to navigate to it again. It
+   only appears after you've opened a project at least once, and the browser
+   may ask you to reconfirm permission.
 
 ## Workflow
 
