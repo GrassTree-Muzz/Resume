@@ -175,7 +175,9 @@ function updatePreview() {
   if (!iteration) { frame.srcdoc = '<p style="font:14px sans-serif;padding:20px">No iteration selected.</p>'; return; }
   try {
     const html = renderDocument(state.templateText, state.projectData.shared, iteration);
-    frame.srcdoc = html;
+    // srcdoc resolves relative URLs against master.html's own location, not the
+    // iteration's real output folder, so inject a preview-only <base> to match it.
+    frame.srcdoc = html.replace('<head>', '<head><base href="../' + iteration.outputPath + '">');
   } catch (err) {
     frame.srcdoc = '<pre style="color:#b00;padding:20px">Preview error: ' + err.message + '</pre>';
   }
