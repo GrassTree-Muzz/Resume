@@ -156,6 +156,7 @@ async function saveProject({ silent } = {}) {
 // ---------- Rendering / fingerprints ----------
 
 function getIteration(id) {
+  if (!state.projectData) { return null; }
   return (state.projectData.iterations || []).find((it) => it.id === id) || null;
 }
 
@@ -188,6 +189,7 @@ function updatePreview() {
 function renderNavigator() {
   const list = $('iterationList');
   list.innerHTML = '';
+  if (!state.projectData) { return; }
   (state.projectData.iterations || []).forEach((iteration) => {
     const item = document.createElement('li');
     item.className = 'iteration-item' + (iteration.id === state.selectedId ? ' selected' : '');
@@ -514,6 +516,11 @@ function renderAll() {
   renderNavigator();
   const container = $('editorForm');
   container.innerHTML = '';
+  if (!state.projectData) {
+    container.innerHTML = '<p class="panel-note">Open a project folder to start editing.</p>';
+    updatePreview();
+    return;
+  }
   if (state.view === 'shared') {
     renderSharedForm(container);
   } else {

@@ -7,47 +7,60 @@
 <link rel="stylesheet" href="editor/style.css">
 </head>
 <body>
-<header id="topBar">
-  <h1>Resume Master Editor</h1>
-  <div id="statusLine"><span id="statusText">No project open.</span><span id="unsavedBadge" hidden>Unsaved changes</span></div>
-</header>
-
-<div id="actionBar" hidden>
-  <button id="saveProjectBtn" type="button">Save Project</button>
-  <button id="generateSelectedBtn" type="button">Generate Selected</button>
-  <button id="rebuildAllBtn" type="button">Rebuild All</button>
-</div>
-
-<div id="openBar">
-  <button id="openProjectBtn" type="button">Open Project Folder&hellip;</button>
-  <span class="hint">Select the <code>murray-lewin</code> folder. Requires desktop Microsoft Edge or Chrome.</span>
-</div>
-
-<main id="layout">
-  <section id="navigator">
-    <div class="navigator-actions">
-      <button id="createIterationBtn" type="button" class="small-btn">+ Create</button>
-      <button id="duplicateIterationBtn" type="button" class="small-btn">Duplicate</button>
-      <button id="removeIterationBtn" type="button" class="small-btn danger">Remove</button>
+<div id="appShell">
+  <header id="topBar">
+    <div class="brand">
+      <h1>Resume Master Editor</h1>
+      <p class="subtitle">Edit shared content once, publish every application</p>
     </div>
-    <ul id="iterationList"></ul>
-  </section>
+    <div id="statusLine"><span id="statusText">No project open.</span><span id="unsavedBadge" hidden>Unsaved changes</span></div>
+  </header>
 
-  <section id="editorArea">
-    <div class="view-toggle">
-      <button id="viewSharedBtn" type="button" class="active">Shared Content</button>
-      <button id="viewIterationBtn" type="button">Iteration Content</button>
+  <div id="toolbar">
+    <div id="openBar">
+      <button id="openProjectBtn" type="button">Open Project Folder&hellip;</button>
+      <span class="hint">Select the <code>murray-lewin</code> folder &middot; requires desktop Microsoft Edge or Chrome</span>
     </div>
-    <div id="editorForm"></div>
-  </section>
 
-  <section id="previewArea">
-    <h2>Preview</h2>
-    <iframe id="previewFrame" title="Document preview" sandbox="allow-same-origin"></iframe>
-  </section>
-</main>
+    <div id="actionBar" hidden>
+      <button id="saveProjectBtn" type="button" class="btn-secondary">Save Project</button>
+      <button id="generateSelectedBtn" type="button" class="btn-secondary">Generate Selected</button>
+      <button id="rebuildAllBtn" type="button" class="btn-primary">Rebuild All</button>
+    </div>
+  </div>
 
-<section id="log" aria-live="polite"></section>
+  <main id="layout">
+    <section id="navigator">
+      <h2 class="panel-heading">Iterations</h2>
+      <div class="navigator-actions">
+        <button id="createIterationBtn" type="button" class="small-btn">+ Create</button>
+        <button id="duplicateIterationBtn" type="button" class="small-btn">Duplicate</button>
+        <button id="removeIterationBtn" type="button" class="small-btn danger">Remove</button>
+      </div>
+      <ul id="iterationList"></ul>
+    </section>
+
+    <section id="editorArea">
+      <div class="view-toggle">
+        <button id="viewSharedBtn" type="button" class="active">Shared Content</button>
+        <button id="viewIterationBtn" type="button">Iteration Content</button>
+      </div>
+      <div id="editorForm"></div>
+    </section>
+
+    <section id="previewArea">
+      <h2 class="panel-heading">Preview</h2>
+      <div class="preview-frame-wrap">
+        <iframe id="previewFrame" title="Document preview" sandbox="allow-same-origin"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <section id="logPanel">
+    <h2 class="panel-heading">Activity log</h2>
+    <div id="log" aria-live="polite"></div>
+  </section>
+</div>
 
 <dialog id="newIterationDialog">
   <form id="newIterationForm" method="dialog">
@@ -55,8 +68,8 @@
     <label class="field"><span>Identifier (lowercase, hyphens)</span><input id="newIterationId" type="text" required></label>
     <label class="field"><span>Display name</span><input id="newIterationName" type="text" required></label>
     <div class="dialog-actions">
-      <button type="button" value="cancel" onclick="this.closest('dialog').close()">Cancel</button>
-      <button type="submit">Create</button>
+      <button type="button" value="cancel" class="btn-ghost" onclick="this.closest('dialog').close()">Cancel</button>
+      <button type="submit" class="btn-primary">Create</button>
     </div>
   </form>
 </dialog>
