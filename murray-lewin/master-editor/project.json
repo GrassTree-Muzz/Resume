@@ -1,0 +1,335 @@
+{
+  "schemaVersion": 1,
+  "project": {
+    "id": "murray-lewin-resume",
+    "title": "Murray Lewin - Application Resumes",
+    "revision": 1
+  },
+  "shared": {
+    "contact": {
+      "phoneDisplay": "0477 477 991",
+      "phoneHref": "+61477477991",
+      "email": "murraylewin91@gmail.com",
+      "linkedinUrl": "https://www.linkedin.com/in/murraylewinengdata/"
+    },
+    "photoFile": "Mlewin 09-2026.jpg",
+    "pdf": {
+      "file": "Murray Lewin General Resume.pdf",
+      "downloadName": "Murray-Lewin-General-Resume.pdf"
+    },
+    "confidentialityNote": "Client identities are generalised throughout for confidentiality.",
+    "filterChips": [
+      { "tag": "all", "label": "All" },
+      { "tag": "strategy", "label": "Maintenance strategy" },
+      { "tag": "reliability", "label": "Reliability" },
+      { "tag": "masterdata", "label": "Master data" },
+      { "tag": "software", "label": "Software & data" },
+      { "tag": "sap", "label": "SAP" },
+      { "tag": "stakeholders", "label": "Stakeholders" }
+    ],
+    "experience": [
+      {
+        "role": "Maintenance System Optimisation (MSO) · Consultant Engineer",
+        "org": "Deloitte · Global Iron Ore Producer (Pilbara)",
+        "dates": "January 2026 - Present",
+        "tags": "strategy reliability masterdata software sap",
+        "open": true,
+        "paragraphs": [
+          "As part of a multidisciplinary delivery team, I helped build a full-stack, cloud-native AI application that modernises and automates maintenance strategy processes across Heavy Mobile Equipment and Fixed Plant assets. It replaces fragmented, manual engineering workflows with AI-augmented data review, statistical reliability modelling and data-driven maintenance optimisation."
+        ],
+        "bullets": [
+          "<b>Maintenance master data</b> Human-in-the-loop review workflows for AI-generated material classifications, FLOC BOM validation and work order classification.",
+          "<b>Reliability engineering</b> Weibull analysis, MTBF/MTTF calculation, Asset Health Index scoring, component age analysis and replacement projection modelling.",
+          "<b>Maintenance strategy optimisation</b> Turning reliability outputs into data-driven maintenance tactic and component replacement recommendations for engineer sign-off.",
+          "<b>Full-stack development</b> React/TypeScript front-end features and Python/FastAPI REST endpoints.",
+          "<b>Data engineering and cloud</b> Databricks Gold-layer products and SAP work order data into PostgreSQL, deployed on Azure Container Apps.",
+          "<b>Data visualisation</b> Interactive reliability charts including Weibull curves, age analysis timelines and health index dashboards using Plotly.js."
+        ]
+      },
+      {
+        "role": "Group Asset Management Framework (Phase 1 & 2) · Consultant Engineer",
+        "org": "Deloitte · Global Gold Mining Operator",
+        "dates": "September 2025 - January 2026",
+        "tags": "strategy stakeholders",
+        "open": false,
+        "paragraphs": [],
+        "bullets": [
+          "Rolled out the group Asset Management Framework and System Definition, defining Key Practice Areas, system requirements and documentation layout.",
+          "Supported Asset Management System documentation and global standardisation.",
+          "Facilitated workshops with central and site asset management teams across Australia, Chile, South Africa, Ghana and Canada."
+        ]
+      },
+      {
+        "role": "Asset Health Index Rollout (Fixed Plant) · Consultant Engineer",
+        "org": "Deloitte · Global Iron Ore Producer (Pilbara)",
+        "dates": "March 2025 - September 2025",
+        "tags": "reliability strategy stakeholders",
+        "open": false,
+        "paragraphs": [
+          "Built and rolled out an Asset Health Index across two Pilbara sites on a 4/3 FIFO roster, covering wet plant assets and low-grade fixed plant."
+        ],
+        "bullets": [
+          "Developed Power BI dashboards to track and communicate asset health scores across sites.",
+          "Worked with reliability engineers and site stakeholders to validate AHI scoring methodologies.",
+          "Aligned the Asset Health Index with existing site maintenance strategies."
+        ]
+      },
+      {
+        "role": "Labour Benchmarking Review · Data & Reporting Analyst",
+        "org": "Deloitte · Iron Ore Producer (Pilbara)",
+        "dates": "January 2025 - March 2025",
+        "tags": "stakeholders",
+        "open": false,
+        "paragraphs": [],
+        "bullets": [
+          "Built a national database of labour quantity information to draw conclusions on industry standards.",
+          "Broke each site down into major assets using exports from multiple sources, enabling like-for-like comparison.",
+          "Maintained direct client engagement to keep scope aligned with the desired outcomes."
+        ]
+      },
+      {
+        "role": "Asset Management Plans (Substations) · Engineering Analyst",
+        "org": "Deloitte · Global Iron Ore Producer (Pilbara)",
+        "dates": "September 2024 - December 2024",
+        "tags": "strategy",
+        "open": false,
+        "paragraphs": [],
+        "bullets": [
+          "Built reports and collated large datasets using appendices and supporting tools to improve readability.",
+          "Performed substation site validation and checked regulatory precautions in low-voltage substations.",
+          "Developed replacement recommendations from historical costing and asset changeout analysis."
+        ]
+      },
+      {
+        "role": "Asset Management Uplift Programme (Asset Tactics Review) · Graduate Team Member",
+        "org": "Deloitte · Global Iron Ore Producer (Pilbara)",
+        "dates": "June 2024 - September 2024",
+        "tags": "strategy reliability sap",
+        "open": false,
+        "paragraphs": [],
+        "bullets": [
+          "<b>Defect elimination</b> Bad actor review identifying the worst-performing site assets by downtime and criticality.",
+          "<b>Work management</b> SAP PM01, PM02 and PM03 changeout analysis to find incomplete changeouts and causes of unnecessary downtime.",
+          "<b>Maintenance strategy documentation</b> PRT and task description review to find gaps and missing information."
+        ]
+      },
+      {
+        "role": "Closed Work Order and Parts Reallocation · Storefront",
+        "org": "Macmahon",
+        "dates": "November 2022 - March 2024 · part time / ad hoc",
+        "tags": "sap masterdata",
+        "open": false,
+        "paragraphs": [],
+        "bullets": [
+          "Used SAP to re-issue unfitted stock items from maintenance orders back into the storefront and prepare work orders for fitters and maintenance crews.",
+          "Associated parts with SAP IDs, assembled service kits, ran stocktakes and adjusted SAP accordingly."
+        ]
+      }
+    ],
+    "skills": [
+      {
+        "heading": "Maintenance and reliability",
+        "chips": ["Mechanical engineering", "Maintenance strategy", "Reliability engineering", "Weibull / MTBF / MTTF", "Asset Health Index", "Defect elimination", "Master data", "Work management"]
+      },
+      {
+        "heading": "Systems and analysis",
+        "chips": ["SAP", "Python", "SQL", "Power BI", "Databricks", "PostgreSQL", "FastAPI"]
+      },
+      {
+        "heading": "Technology and delivery",
+        "chips": ["React / TypeScript", "Plotly.js", "Azure", "AWS", "Docker", "Git", "Client engagement", "Clear communication", "CPEng in progress"]
+      }
+    ],
+    "education": {
+      "entries": [
+        { "role": "Bachelor of Science", "org": "University of Western Australia", "dates": "Mechanical Engineering · Data Science" },
+        { "role": "Hale School", "org": "Western Australia", "dates": "2013 - 2019" }
+      ],
+      "project": {
+        "title": "Document question-answering chatbot",
+        "org": "University of Western Australia · Group project",
+        "dates": "July 2023 - November 2023",
+        "bullets": [
+          "Built a web-based chatbot answering student questions from a UWA document set.",
+          "Combined an HTML, CSS and JavaScript front end with Python integration to cloud-hosted AI services.",
+          "Presented the project to the UWA Software Engineering board for a 90% overall project mark."
+        ]
+      }
+    },
+    "community": {
+      "text": "Volunteer experience includes the Ronald McDonald House Big Brother Program, Ngalangangpum School in Warmun, the Mt Hawthorn Special Education Unit, Quintilian School and the Sienna Centre.",
+      "achievement": "Achievement: Duke of Edinburgh Bronze Medallion."
+    }
+  },
+  "iterations": [
+    {
+      "id": "hays-defence-mechanical-engineer",
+      "displayName": "Hays Defence · Mechanical Engineer",
+      "outputPath": "applications/hays-defence-mechanical-engineer/index.html",
+      "sourceJobUrl": "https://au.seek.com/job/94097237",
+      "pageTitle": "Murray Lewin - Mechanical Engineer (1-3yrs) | Defence",
+      "metaDescription": "Murray Lewin - Mechanical Engineer Defence application.",
+      "eyebrow": "Application resume · Hays Defence",
+      "tagline": "Mechanical Engineer · Maintenance, reliability and technical support",
+      "intro": "Mechanical engineering graduate and consultant engineer with experience in maintenance support, reliability analysis, work management, technical documentation and heavy-industry asset delivery.",
+      "whyTabLabel": "Why Defence",
+      "about": {
+        "lead": "I am a consultant engineer in Deloitte's Strategy, Risk and Transactions practice, working within a specialist asset management team.",
+        "secondary": "My experience combines maintenance strategy, reliability engineering, SAP work management, parts coordination, technical documentation and data-enabled engineering analysis across fixed plant and heavy mobile equipment.",
+        "atAGlance": [
+          { "label": "Mechanical foundation", "value": "Bachelor of Science in Mechanical Engineering and Data Science" },
+          { "label": "Maintenance context", "value": "Work orders, parts, service kits, stocktakes, asset tactics and maintenance strategy documentation" },
+          { "label": "Analysis", "value": "Weibull, MTBF/MTTF, Asset Health Index, bad actor review and replacement modelling" },
+          { "label": "Eligibility", "value": "Australian citizen; eligible to obtain and maintain Defence security clearance" }
+        ]
+      },
+      "why": {
+        "heading": "Why this Defence role",
+        "lead": "The role's practical emphasis on maintenance, testing, fault-finding, documentation and continuous improvement aligns with my maintenance and asset-management foundation.",
+        "body": "I have worked close to maintenance operations, prepared work orders and service kits, investigated reliability and downtime patterns, and reviewed the documentation that engineering and maintenance decisions depend on. I am interested in developing that foundation through hands-on Defence sustainment and mechanical engineering work.",
+        "mapItems": [
+          { "label": "Maintenance and work management", "value": "SAP work orders, parts reallocation, service kits, stocktakes, maintenance strategy reviews and changeout analysis." },
+          { "label": "Diagnostics and reliability", "value": "Bad actor review by downtime and criticality, Weibull, MTBF/MTTF, health scoring and replacement projections." },
+          { "label": "Documentation and compliance", "value": "Asset reports, system requirements, documentation layouts, PRTs, task descriptions and regulatory precaution validation." },
+          { "label": "Team delivery", "value": "Collaboration with maintenance crews, reliability engineers, site teams, software/data specialists and stakeholders across five countries." }
+        ],
+        "evidenceBoundary": "Naval, maritime, submarine, vessel, Defence-specific and ITAR experience are not represented in the source material and are not claimed."
+      },
+      "more": {
+        "preBlocks": [
+          { "heading": "Eligibility", "kvItems": [
+            { "label": "Security", "value": "Australian citizen; eligible to obtain and maintain Defence security clearance and to work on regulated Defence-related programs, subject to formal assessment." },
+            { "label": "Professional", "value": "Actively working toward CPEng." }
+          ] }
+        ],
+        "postBlocks": []
+      }
+    },
+    {
+      "id": "kinexus-mechanical-engineer",
+      "displayName": "Kinexus · Mechanical Engineer",
+      "outputPath": "applications/kinexus-mechanical-engineer/index.html",
+      "sourceJobUrl": "https://au.seek.com/job/94016413",
+      "pageTitle": "Murray Lewin - Mechanical Engineer | Kinexus",
+      "metaDescription": "Murray Lewin - Mechanical Engineer application for Kinexus naval sustainment.",
+      "eyebrow": "Application resume · Kinexus",
+      "tagline": "Mechanical Engineer · Sustainment, reliability and controlled engineering data",
+      "intro": "Mechanical engineering graduate and consultant engineer with experience in maintenance strategy, reliability analysis, engineering documentation, asset data, SAP work management and practical stakeholder delivery.",
+      "whyTabLabel": "Why Kinexus",
+      "about": {
+        "lead": "I am a consultant engineer in Deloitte's Strategy, Risk and Transactions practice, within the specialist asset management team.",
+        "secondary": "My work combines maintenance strategy optimisation, reliability analysis, maintenance master data and software delivery. I enjoy the point where engineering judgement meets useful data: finding what matters, making it visible and building tools that help people act on it.",
+        "atAGlance": [
+          { "label": "Sustainment foundation", "value": "Maintenance strategy, reliability, work management, parts, asset data and documentation" },
+          { "label": "Analysis", "value": "Weibull, MTBF/MTTF, Asset Health Index, component age and replacement projection modelling" },
+          { "label": "Governance", "value": "Asset Management Frameworks, system requirements, documentation layouts and regulatory validation" },
+          { "label": "Eligibility", "value": "Australian citizen; eligible to obtain and maintain NV1 clearance; CPEng in progress" }
+        ]
+      },
+      "why": {
+        "heading": "Why Kinexus",
+        "lead": "Kinexus needs engineering support that is safe, practical, documented and suitable for implementation. My background is strongest where engineering judgement meets maintenance systems, asset evidence and reliability decisions.",
+        "body": "I can contribute to support-system and sustainment work through engineering analysis, technical documentation, asset-data control, work-management understanding, configuration/change support and cross-functional coordination.",
+        "mapItems": [
+          { "label": "Reliability and analysis", "value": "Weibull, MTBF/MTTF, Asset Health Index scoring, component age analysis and replacement projections." },
+          { "label": "Support-system assets", "value": "SAP parts, work orders, service kits, stocktakes, master data, FLOC/BOM validation and maintenance documentation." },
+          { "label": "Engineering governance", "value": "Asset-management frameworks, system requirements, documentation layouts, regulatory validation and configuration/change support." },
+          { "label": "Coordination", "value": "Delivery with engineering, reliability, site, software/data, maintenance and international stakeholder teams." }
+        ],
+        "evidenceBoundary": "Naval, submarine, SUBSAFE, ITAR, US/UK standards equivalency and Defence-specific sustainment are not represented in the source material and are not claimed."
+      },
+      "more": {
+        "preBlocks": [
+          { "heading": "Eligibility", "kvItems": [
+            { "label": "Security", "value": "Australian citizen; eligible to obtain and maintain an NV1 Defence Security Clearance and relevant program access, subject to formal assessment." },
+            { "label": "Professional", "value": "Actively working toward CPEng." }
+          ] }
+        ],
+        "postBlocks": []
+      }
+    },
+    {
+      "id": "mad3-mechanical-engineer",
+      "displayName": "MAD3 Engineering · Mechanical Engineer",
+      "outputPath": "applications/mad3-mechanical-engineer/index.html",
+      "sourceJobUrl": "https://au.seek.com/job/94237395",
+      "pageTitle": "Murray Lewin - Mechanical Engineer | MAD3 Engineering",
+      "metaDescription": "Murray Lewin - Mechanical Engineer application for MAD3 Engineering.",
+      "eyebrow": "Application resume · MAD3 Engineering",
+      "tagline": "Mechanical Engineer · Design support, reliability and practical asset outcomes",
+      "intro": "Mechanical engineering graduate and consultant engineer with experience in reliability analysis, maintenance strategy, asset documentation, engineering reporting and stakeholder delivery across Western Australian heavy industry.",
+      "whyTabLabel": "Why MAD3",
+      "about": {
+        "lead": "I am a consultant engineer in Deloitte's Strategy, Risk and Transactions practice, within the specialist asset management team. My work centres on maintenance strategy optimisation, reliability analysis and the maintenance master data that underpins both.",
+        "secondary": "My mechanical engineering foundation is supported by practical work across fixed plant, heavy mobile equipment, substations and maintenance operations. I combine engineering judgement with structured analysis, clear reports and useful tools.",
+        "atAGlance": [
+          { "label": "Engineering context", "value": "Mechanical engineering, reliability, maintenance strategy and asset assessment" },
+          { "label": "Industrial context", "value": "Mining and heavy industry across Western Australian fixed plant and mobile equipment" },
+          { "label": "Toolset", "value": "SAP, Python, SQL, Power BI, Databricks, MATLAB, React/TypeScript, FastAPI and Azure" },
+          { "label": "Professional status", "value": "Eligible for Engineers Australia membership; actively working toward CPEng" }
+        ]
+      },
+      "why": {
+        "heading": "Why MAD3 Engineering",
+        "lead": "MAD3's multidisciplinary consulting environment matches the way I work: combine engineering judgement, structured analysis and clear communication to deliver useful outcomes for clients.",
+        "body": "I bring experience producing engineering reports, asset assessments, reliability models, replacement recommendations and documentation for stakeholders across mining and heavy industry. I am comfortable managing several workstreams, working with client teams and turning complex information into a defensible recommendation.",
+        "mapItems": [
+          { "label": "Engineering analysis", "value": "Weibull, MTBF/MTTF, Asset Health Index scoring, component age analysis and replacement projection modelling." },
+          { "label": "Technical communication", "value": "Reports, appendices, dashboards, system requirements, documentation layouts and clear engineering recommendations." },
+          { "label": "Site and asset context", "value": "Fixed plant, heavy mobile equipment, substations, regulatory precaution validation and maintenance operations." },
+          { "label": "Client delivery", "value": "Direct engagement, scope alignment, workshops and collaboration with reliability engineers and site stakeholders." }
+        ],
+        "evidenceBoundary": "My source material does not evidence ANSYS/Strand7 FEA, Autodesk CAD, pressure-vessel or piping design. Those capabilities are not claimed."
+      },
+      "more": {
+        "preBlocks": [
+          { "heading": "Eligibility", "kvItems": [
+            { "label": "Professional", "value": "Australian citizen; eligible for Engineers Australia membership; actively working toward CPEng." }
+          ] }
+        ],
+        "postBlocks": []
+      }
+    },
+    {
+      "id": "horizon-power-data-engineer",
+      "displayName": "Horizon Power · Data Engineer",
+      "outputPath": "applications/horizon-power-data-engineer/index.html",
+      "sourceJobUrl": "https://au.seek.com/job/94310754",
+      "pageTitle": "Murray Lewin - Data Engineer | Horizon Power",
+      "metaDescription": "Murray Lewin - Data Engineer application for Horizon Power.",
+      "eyebrow": "Application resume · Horizon Power",
+      "tagline": "Data Engineer · Trusted data foundations, analytics and operational insight",
+      "intro": "Consultant engineer with hands-on experience building cloud data products, SQL/Python workflows, maintenance data pipelines, reporting tools and practical solutions with business stakeholders.",
+      "whyTabLabel": "Why Horizon",
+      "about": {
+        "lead": "I am a consultant engineer in Deloitte's Strategy, Risk and Transactions practice, within the specialist asset management team.",
+        "secondary": "My work combines maintenance strategy optimisation, reliability analysis, maintenance master data and software delivery. I have built data products from operational sources, developed application features and created dashboards that help stakeholders act on engineering information.",
+        "atAGlance": [
+          { "label": "Data foundation", "value": "Databricks Gold-layer products and SAP work-order data into PostgreSQL" },
+          { "label": "Engineering and analytics", "value": "Python, SQL, FastAPI, Power BI, Plotly.js, reliability modelling and Asset Health Index scoring" },
+          { "label": "Cloud delivery", "value": "Azure Container Apps, AWS, Docker, Git and React/TypeScript" },
+          { "label": "Stakeholders", "value": "Direct client engagement, workshops across five countries and validation with site reliability teams" }
+        ]
+      },
+      "why": {
+        "heading": "Why Horizon Power",
+        "lead": "Horizon Power's focus on trusted data foundations, operational insight and emerging AI matches my recent work at the engineering and data boundary.",
+        "body": "I have built data products from Databricks and SAP sources into PostgreSQL, developed Python/FastAPI services and React/TypeScript features, and created Power BI and Plotly.js views that help stakeholders act on reliability and asset information. I enjoy translating a messy operational question into a useful, supportable solution.",
+        "mapItems": [
+          { "label": "Data solutions", "value": "Databricks Gold-layer products, SAP work-order data, PostgreSQL application data and validated engineering information." },
+          { "label": "Engineering delivery", "value": "Python/FastAPI REST endpoints, React/TypeScript features, Azure Container Apps and vertical-slice delivery." },
+          { "label": "Analytics", "value": "Power BI dashboards, interactive Plotly.js reliability visualisations, Weibull curves, age analysis and health scoring." },
+          { "label": "Business partnership", "value": "Direct client engagement, international workshops, scope alignment and validation with reliability engineers and site stakeholders." }
+        ],
+        "evidenceBoundary": "Snowflake, Confluent Kafka, BryteFlow, Upsolver, change-data-capture and production event-driven streaming are not represented in the source material and are not claimed."
+      },
+      "more": {
+        "preBlocks": [],
+        "postBlocks": [
+          { "heading": "Evidence note", "style": "evidence", "text": "Client identities are generalised for confidentiality. The source material evidences engineering-led data product delivery, but does not claim Snowflake, Kafka, CDC or the named ingestion platforms in the advertisement." }
+        ]
+      }
+    }
+  ],
+  "generationRecords": {}
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resume Master Editor</title>
+<link rel="stylesheet" href="editor/style.css">
+</head>
+<body>
+<header id="topBar">
+  <h1>Resume Master Editor</h1>
+  <div id="statusLine"><span id="statusText">No project open.</span><span id="unsavedBadge" hidden>Unsaved changes</span></div>
+</header>
+
+<div id="actionBar" hidden>
+  <button id="saveProjectBtn" type="button">Save Project</button>
+  <button id="generateSelectedBtn" type="button">Generate Selected</button>
+  <button id="rebuildAllBtn" type="button">Rebuild All</button>
+</div>
+
+<div id="openBar">
+  <button id="openProjectBtn" type="button">Open Project Folder&hellip;</button>
+  <span class="hint">Select the <code>murray-lewin</code> folder. Requires desktop Microsoft Edge or Chrome.</span>
+</div>
+
+<main id="layout">
+  <section id="navigator">
+    <div class="navigator-actions">
+      <button id="createIterationBtn" type="button" class="small-btn">+ Create</button>
+      <button id="duplicateIterationBtn" type="button" class="small-btn">Duplicate</button>
+      <button id="removeIterationBtn" type="button" class="small-btn danger">Remove</button>
+    </div>
+    <ul id="iterationList"></ul>
+  </section>
+
+  <section id="editorArea">
+    <div class="view-toggle">
+      <button id="viewSharedBtn" type="button" class="active">Shared Content</button>
+      <button id="viewIterationBtn" type="button">Iteration Content</button>
+    </div>
+    <div id="editorForm"></div>
+  </section>
+
+  <section id="previewArea">
+    <h2>Preview</h2>
+    <iframe id="previewFrame" title="Document preview" sandbox="allow-same-origin"></iframe>
+  </section>
+</main>
+
+<section id="log" aria-live="polite"></section>
+
+<dialog id="newIterationDialog">
+  <form id="newIterationForm" method="dialog">
+    <h2>New iteration</h2>
+    <label class="field"><span>Identifier (lowercase, hyphens)</span><input id="newIterationId" type="text" required></label>
+    <label class="field"><span>Display name</span><input id="newIterationName" type="text" required></label>
+    <div class="dialog-actions">
+      <button type="button" value="cancel" onclick="this.closest('dialog').close()">Cancel</button>
+      <button type="submit">Create</button>
+    </div>
+  </form>
+</dialog>
+
+<script type="module" src="editor/app.js"></script>
+</body>
+</html>
