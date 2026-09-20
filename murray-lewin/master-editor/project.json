@@ -50,51 +50,51 @@
     ],
     "experience": [
       {
-        "role": "Maintenance System Optimisation · Consultant Engineer",
-        "org": "Deloitte Australia · Resources Sector Client",
-        "dates": "January 2026 - Present",
+        "role": "Maintenance System Optimisation (MSO) · Consultant Engineer",
+        "org": "Resources Sector Client",
+        "dates": "January 2026 - Current",
         "tags": "strategy reliability masterdata software sap",
         "open": true,
         "paragraphs": [
-          "Contributed to an engineering application supporting maintenance strategy review for mobile equipment and fixed plant, combining maintenance data, reliability analysis and practical decision-support tools."
+          "Deloitte delivered a full-stack, cloud-native AI application for the client to modernise and automate maintenance strategy processes across Heavy Mobile Equipment (HME) and Fixed Plant (FXP) assets. The platform replaces fragmented, manual engineering workflows with AI-augmented data review, statistical reliability modelling, and data-driven maintenance optimisation, enabling engineers to shift from reactive to proactive asset management. The solution integrates with Databricks and SAP work order systems to provide end-to-end traceability from raw operational data through to validated maintenance recommendations, delivering projected annual savings of $35 million through reduced unplanned downtime and optimised component replacement cycles."
         ],
         "bullets": [
-          "Supported reliability analysis using Weibull methods, failure metrics, asset health scoring and component age data.",
-          "Developed data review workflows to help engineers validate classifications, equipment structures and maintenance records.",
-          "Contributed to application development using React, TypeScript, Python and FastAPI.",
-          "Worked with SAP maintenance data, SQL and Databricks to support engineering analysis and application reporting.",
-          "Worked with Azure-hosted applications, including user authentication and monitoring.",
-          "Built interactive dashboards and reliability visualisations to make asset data easier to interpret."
+          "<b>Reliability engineering</b> - Weibull analysis, MTBF/MTTF calculation, Asset Health Index scoring, component age analysis and replacement projection modelling.",
+          "<b>AI-augmented engineering workflows</b> - human-in-the-loop review for AI-generated material classifications, FLOC BOM validation and work order classification.",
+          "<b>Full-stack web development</b> - React/TypeScript (frontend) and Python/FastAPI (backend) following a vertical-slice architecture.",
+          "<b>Data engineering</b> - Databricks Gold-layer enterprise data products and SAP work order data into a dual-schema PostgreSQL application database.",
+          "<b>Azure cloud platform</b> - Azure Container Apps with Entra ID authentication and Application Insights telemetry.",
+          "<b>Data visualisation</b> - interactive reliability charts including Weibull curves, age analysis timelines and health index dashboards using Plotly.js."
         ]
       },
       {
-        "role": "Asset Management Framework · Consultant Engineer",
+        "role": "Client Asset Management Framework (Phase 1 and 2) · Consultant Engineer",
         "org": "Deloitte · Global Resources Client",
         "dates": "September 2025 - January 2026",
         "tags": "strategy stakeholders",
         "open": false,
         "paragraphs": [
-          "Supported development of an asset management framework and system documentation, working with international stakeholders to align practices."
+          "Rolled out the Client Asset Management Framework and System Definition. Defined Key Practice Areas, system requirements and documentation layout for the client. Worked with the client's central team across Australia, Chile, South Africa, Ghana and Canada to identify and align global frameworks."
         ],
         "bullets": [
-          "Contributed to defining key practice areas and documenting asset management requirements.",
-          "Prepared consistent system documentation to support use across operating regions.",
-          "Supported stakeholder workshops to gather input and align the framework."
+          "Asset Management Framework definition and Key Practice Areas rollout.",
+          "Asset Management System documentation and global standardisation.",
+          "International workshopping facilitated across 5 countries using Mentimeter."
         ]
       },
       {
-        "role": "Asset Health Index · Consultant Engineer",
+        "role": "Asset Health Index - Pilbara Sites · Consultant Engineer",
         "org": "Deloitte · Resources Sector Client",
         "dates": "March 2025 - September 2025",
         "tags": "reliability strategy stakeholders",
         "open": false,
         "paragraphs": [
-          "Supported development and site rollout of an Asset Health Index for fixed plant assets."
+          "4/3 roster fly-in fly-out rollout and build of the Asset Health Index for the client. This involved the wet plant assets at one Pilbara site and the low-grade fixed plant at a second Pilbara site."
         ],
         "bullets": [
-          "Developed Power BI dashboards to communicate asset health and highlight areas for review.",
-          "Worked with reliability engineers to validate asset health scoring.",
-          "Engaged site teams to align asset health reporting with maintenance priorities."
+          "Power BI dashboard development to track and communicate asset health scores across sites.",
+          "Engagement with Reliability Engineers and site stakeholders to validate AHI scoring methodologies.",
+          "People engagement and RE collaboration to align the Asset Health Index with site maintenance strategies."
         ]
       },
       {
@@ -105,9 +105,9 @@
         "open": false,
         "paragraphs": [],
         "bullets": [
-          "Compiled and analysed workforce and asset data to support maintenance labour benchmarking.",
-          "Clarified scope and assumptions with stakeholders to support relevant comparisons.",
-          "Standardised asset groupings and datasets to support like-for-like comparisons."
+          "Worked with national resources to collect a database of information in order to draw conclusions and summaries on industry standard for labour quantities.",
+          "Direct back-and-forth with client to ensure scope aligned with the desired outcomes and the correct conclusions were made.",
+          "Breaking down each site into major assets using exports from various sources, allowing for accurate comparisons between equivalent datasets (ensuring bias due to resource type/org structure would not affect the end result)."
         ]
       },
       {
@@ -118,9 +118,9 @@
         "open": false,
         "paragraphs": [],
         "bullets": [
-          "Collated asset and maintenance data into structured asset management plans.",
-          "Supported site validation of substation information and maintenance requirements.",
-          "Analysed historical cost and component replacement data to support maintenance planning recommendations."
+          "Report Building and collation of large data, utilising appendices and other tools to improve reading ease.",
+          "Substation site validation - Checking the correct regulatory precautions are taking in Low Voltage Substations at the site.",
+          "Recommendations are made based on historical costing and Changeout breakdown of assets - ensuring that the best measures are taken to break down each substation in scope."
         ]
       },
       {
@@ -131,25 +131,25 @@
         "open": false,
         "paragraphs": [],
         "bullets": [
-          "Analysed downtime and asset criticality to identify poorly performing equipment for review.",
-          "Reviewed SAP maintenance and component replacement records to identify incomplete work and timing issues contributing to downtime.",
-          "Reviewed maintenance task descriptions and supporting documentation for gaps affecting inspection quality."
+          "Bad Actor Review involving calculating the worst performing site assets on the basis of downtime and their associated criticality.",
+          "Changeout Analysis of SAP exports involving review of PM01, PM02 and PM03 changeout notifications for incomplete changeouts to find causes of unnecessary downtime on assets. This also included looking at timing issues of PM01 and PM02 notifications.",
+          "Documentation/PRT review to find gaps in task descriptions, or missing information which would make it challenging for an inspector to evaluate an assets condition."
         ]
       },
       {
-        "role": "Maintenance Stores and Work Order Support",
-        "org": "Macmahon",
+        "role": "Closed Work Order and Parts Reallocation · Storefront",
+        "org": "Macmahon (Mining Client)",
         "dates": "November 2022 - March 2024 · part time / ad hoc",
         "tags": "sap masterdata",
         "open": false,
         "paragraphs": [
-          "Used SAP S/4HANA to return unused maintenance parts to stock and prepare work orders."
+          "Using SAP (S4Hana) to re-issue stock items back into the storefront that weren't fitted from maintenance orders. Also preparing work orders for fitters and maintenance crew to perform routine fixes."
         ],
         "bullets": [
-          "Matched parts to SAP material records for accurate stock allocation.",
-          "Prepared service kits and ordered parts for maintenance teams.",
-          "Completed stocktakes and updated inventory records in SAP.",
-          "Reorganised stores and removed expired hose stock."
+          "Associating parts with SAP ID so that they can be re-issued into stock.",
+          "Collecting work orders and ordering parts to make service kits for the team.",
+          "Operating a stock take which involved reviewing item quantities and adjusting SAP as such.",
+          "Redistribution of hose stockpiles back into stock bins and disposing of out of date hoses to clear backlog."
         ]
       }
     ],
@@ -210,14 +210,15 @@
         }
       ],
       "project": {
-        "title": "Student Enquiry Chatbot",
-        "org": "University of Western Australia · Group project",
+        "title": "Chatbot UWA Web Design · Group Member",
+        "org": "University of Western Australia",
         "dates": "July 2023 - November 2023",
         "bullets": [
-          "Built webpage structure and styling using HTML and CSS.",
-          "Added JavaScript navigation and user interactions.",
-          "Used Python to connect the chatbot with cloud services and reference documents.",
-          "Presented the completed application as part of the final project assessment."
+          "Created a UWA questionnaire-inspired chatbot that uses the ChatGPT algorithm to answer students questions from a webpage.",
+          "HTML and CSS design by first building a framework with HTML and then adding colour and design with CSS.",
+          "JavaScript actioning which involved strategically adding buttons and capability to the page such as saving user details, passwords and navigation.",
+          "Python AI training was used to create a link between the AI from Amazon cloud servers and the various documents stored in the UWA questionnaire database. A trial and error system was used to bring the AI to ~95% accuracy.",
+          "Final Presentation was made and the product was presented to the UWA Software Engineering board which resulted in an overall positive reaction, and 90% overall project mark."
         ]
       }
     },
@@ -554,24 +555,24 @@
       },
       "why": {
         "heading": "Why ASC",
-        "lead": "ASC's work has a purpose I find genuinely compelling - sustaining the Collins Class fleet today while standing up the submarine build and sustainment program for tomorrow. I would like to bring my asset management and reliability background to that effort.",
-        "body": "At Deloitte I work with maintenance data, reliability analysis and engineering applications for resources sector clients: an Asset Health Index that tracks fixed-plant health, a maintenance tactics review that found where reliability was being lost, and an asset management framework built with international stakeholders. The assets are different, but the job of turning maintenance data into a clear, defensible decision is the same one I already do. I am realistic that I am coming from mining rather than maritime defence, and I see this role as a genuine step toward the kind of purposeful engineering work I want to build a career in.",
+        "lead": "ASC's work has a purpose I find genuinely compelling. I have always enjoyed the practical side of engineering - understanding how complex equipment is maintained, making the information useful for the people doing the work, and seeing a better decision turn into a real improvement. The chance to bring that mindset to sustaining the Collins Class fleet, and to the submarine build and sustainment program ahead, is one I would be proud to take on.",
+        "body": "At Deloitte I work with maintenance data, reliability analysis and engineering applications for resources sector clients: a full-stack maintenance strategy platform for heavy mobile equipment and fixed plant, an Asset Health Index built and rolled out across two Pilbara sites, a maintenance tactics review, and an asset management framework built with international stakeholders. The assets are different, but the job of turning maintenance data into a clear, defensible decision is the same one I already do. I am realistic that I am coming from mining rather than maritime defence, and I see this role as a genuine step toward the kind of purposeful engineering work I want to build a career in.",
         "mapItems": [
           {
             "label": "Asset management and maintenance strategy",
-            "value": "Asset Health Index rollout for fixed plant assets, a Maintenance Tactics Review, and an Asset Management Framework and System Definition."
+            "value": "A full-stack maintenance strategy platform for Heavy Mobile Equipment and Fixed Plant, an Asset Health Index rollout across two Pilbara sites, a Maintenance Tactics Review, and an Asset Management Framework and System Definition."
           },
           {
             "label": "Reliability and continuous improvement",
-            "value": "Weibull methods, failure metrics and asset health scoring, plus reviewing downtime and criticality data to identify poorly performing equipment."
+            "value": "Weibull analysis, MTBF/MTTF calculation, Asset Health Index scoring, component age and replacement projection modelling, plus bad actor review by downtime and criticality."
           },
           {
             "label": "Asset integrity and lifecycle planning",
-            "value": "Component age data, historical cost and replacement analysis, and structured asset management plans for substations."
+            "value": "Historical costing and changeout analysis for substation asset management plans, component age analysis and replacement projection modelling."
           },
           {
             "label": "Governance, risk and stakeholder engagement",
-            "value": "System documentation, stakeholder workshops and engagement with reliability engineers and site teams to align priorities."
+            "value": "System requirements, documentation layout and global standardisation, plus stakeholder workshops across Australia, Chile, South Africa, Ghana and Canada."
           }
         ],
         "evidenceBoundary": "My background is in mining and heavy industrial asset management, not maritime or submarine sustainment - I have no naval, shipbuilding or ITAR-cleared experience, and I do not currently hold an NV1 clearance. I am putting that forward honestly because the underlying discipline - reliability engineering and maintenance strategy - is one I can already demonstrate, even though the assets and clearance context here would be new to me."
